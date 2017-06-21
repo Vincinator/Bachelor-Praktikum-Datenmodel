@@ -1,4 +1,4 @@
-package model;
+package bp.common.model;
 
 /**
  * Created by Bi Banh Bao on 18.05.2017.

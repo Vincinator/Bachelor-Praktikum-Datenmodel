@@ -1,4 +1,4 @@
-package model;
+package bp.common.model;
 
 /**
  * Created by Bi on 16.05.2017.

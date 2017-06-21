@@ -1,4 +1,4 @@
-package model;
+package bp.common.model;
 
 public class Stairs extends Obstacle {
 	private int numberOfStairs;

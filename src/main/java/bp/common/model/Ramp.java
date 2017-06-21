@@ -1,4 +1,4 @@
-package model;
+package bp.common.model;
 
 public class  Ramp extends Obstacle{
 

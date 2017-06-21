@@ -1,4 +1,4 @@
-package model;
+package bp.common.model;
 
 
 import javax.persistence.*;
