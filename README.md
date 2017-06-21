@@ -34,3 +34,26 @@ Ebenfalls in der pom.xml die Dependency zu diesem GitHub Projekt hinzufügen
 import bp.common.model.Obstacle;
 ```
 .. oder über Alt+Enter von Intelij den import hinschreiben lassen ;)
+
+## Gradle
+
+
+In der build.gradle jitpack hinzufügen
+
+```gradle
+allprojects {
+    repositories {
+        jcenter()
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+
+... und in der build.gradle der app 
+
+```gradle
+dependencies {
+    ...
+    compile 'com.github.Vincinator:BP-Common:master-SNAPSHOT'
+}
+```
