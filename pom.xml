@@ -17,7 +17,7 @@
     </dependencies>
     <packaging>jar</packaging>
     <build>
-        <finalName>BPCommon.jar</finalName>
+        <finalName>BPCommon</finalName>
     </build>
 
 </project>
