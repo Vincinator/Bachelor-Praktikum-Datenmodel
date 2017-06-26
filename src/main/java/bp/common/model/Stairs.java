@@ -2,15 +2,17 @@ package bp.common.model;
 
 public class Stairs extends Obstacle {
 	private int numberOfStairs;
+    private int heightOfStairs;
 	private boolean handleAvailable;
 
 	public Stairs(){
 
 	}
 
-	public Stairs(String name, double longitude, double latitude, int numberOfStairs, boolean handleAvailable){
+	public Stairs(String name, double longitude, double latitude, int numberOfStairs,int heightOfStairs, boolean handleAvailable){
 		super(name, ObstacleTypes.STAIRS, longitude, latitude);
 		this.numberOfStairs = numberOfStairs;
+        this.heightOfStairs = heightOfStairs;
 		this.handleAvailable = handleAvailable;
 	}
 
@@ -30,10 +32,12 @@ public class Stairs extends Obstacle {
         this.handleAvailable = bool;
     }
 
-    // Test
-    public static void main(String[] args){
-        Stairs astairs = new Stairs("Hauptwache",49.874978, 8.655971, 15, true);
-        System.out.println("Stairs has name:"+astairs.getName()+" and long:"+astairs.getLongitude()+" and Type:"+astairs.getTypecode());
+
+    public int getHeightOfStairs() {
+        return heightOfStairs;
     }
 
+    public void setHeightOfStairs(int heightOfStairs) {
+        this.heightOfStairs = heightOfStairs;
+    }
 }
