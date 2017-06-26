@@ -32,12 +32,7 @@ public class Stairs extends Obstacle {
         this.handleAvailable = bool;
     }
 
+    public int getHeightOfStairs() {return heightOfStairs;}
 
-    public int getHeightOfStairs() {
-        return heightOfStairs;
-    }
-
-    public void setHeightOfStairs(int heightOfStairs) {
-        this.heightOfStairs = heightOfStairs;
-    }
+    public void setHeightOfStairs(int heightOfStairs) {this.heightOfStairs = heightOfStairs;}
 }
