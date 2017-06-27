@@ -1,6 +1,6 @@
 package bp.common.model;
 
-public class Stairs extends Obstacle {
+public class Stairs extends Obstacle implements IObstacle{
 	private int numberOfStairs;
 	private boolean handleAvailable;
 

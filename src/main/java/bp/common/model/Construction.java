@@ -5,7 +5,7 @@ import java.util.Date;
 /**
  * This class represents the Obstacle Construction and is used to stored
  */
-public class  Construction extends Obstacle{
+public class  Construction extends Obstacle implements IObstacle{
 	/**
 	 * attribute size describe the size in m2 of a construction
 	 */

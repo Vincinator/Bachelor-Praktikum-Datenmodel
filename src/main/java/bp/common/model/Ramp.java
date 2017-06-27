@@ -1,6 +1,6 @@
 package bp.common.model;
 
-public class  Ramp extends Obstacle{
+public class  Ramp extends Obstacle implements IObstacle{
 
 	public Ramp(){
 	}

@@ -5,7 +5,7 @@ package bp.common.model;
  * this class represents tight passgage through which disable people with wheelchair
  * are not able to pass.
  */
-public class TightPassage extends Obstacle {
+public class TightPassage extends Obstacle implements IObstacle {
     /**
      * the width of the passage
      */

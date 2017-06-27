@@ -1,6 +1,6 @@
 package bp.common.model;
 
-public class Uneveness extends Obstacle {
+public class Uneveness extends Obstacle implements IObstacle {
 	private double length;
 
 	public Uneveness(){

@@ -3,7 +3,7 @@ package bp.common.model;
 /**
  * Created by Bi Banh Bao on 18.05.2017.
  */
-public class FastTrafficLight extends Obstacle {
+public class FastTrafficLight extends Obstacle implements IObstacle {
     /**
      * duration of the traffic light in seconds
      */

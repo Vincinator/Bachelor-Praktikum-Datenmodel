@@ -4,7 +4,7 @@ package bp.common.model;
  * Created by Bi Banh Bao on 18.05.2017
  * this class represents Elevator on the street, which helps disable people mobilize.
  */
-public class Elevator extends Obstacle {
+public class Elevator extends Obstacle implements IObstacle {
     /**
      * attribute from and to describe the 2 streets the elevator connects
      */

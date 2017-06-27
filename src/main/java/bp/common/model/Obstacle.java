@@ -7,7 +7,7 @@ import javax.persistence.*;
  * Created by Bi on 18.05.2017.
  */
 @Entity
-public class Obstacle  {
+public class Obstacle implements IObstacle {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
