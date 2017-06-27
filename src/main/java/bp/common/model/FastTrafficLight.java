@@ -11,6 +11,11 @@ public class FastTrafficLight extends Obstacle implements IObstacle {
 
     public FastTrafficLight() {
     }
+
+    public String getTypeName() {
+        return "FastTrafficLight";
+    }
+
     public FastTrafficLight(String name, double longitude, double latitude, int duration) {
         super(name, ObstacleTypes.FAST_TRAFFIC_LIGHT, longitude, latitude);
         this.duration = duration;

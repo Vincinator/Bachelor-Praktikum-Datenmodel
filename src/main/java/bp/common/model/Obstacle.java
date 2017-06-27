@@ -7,10 +7,9 @@ import javax.persistence.*;
  * Created by Bi on 18.05.2017.
  */
 @Entity
-public class Obstacle implements IObstacle {
+public abstract class Obstacle implements IObstacle {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private long id;
 
     public long getId() {
@@ -22,7 +21,7 @@ public class Obstacle implements IObstacle {
     }
 
 
-    public String typename;
+    public String name;
     public ObstacleTypes typecode;
 
     public double longitude = 49.874978;
@@ -33,18 +32,20 @@ public class Obstacle implements IObstacle {
     }
 
     public Obstacle(String name, ObstacleTypes typecode, double longitude, double latitude){
-        this.typename = name;
+        this.name = name;
         this.typecode = typecode;
         this.longitude = longitude;
         this.latitude = latitude;
     }
 
     public String getName() {
-        return typename;
+        return name;
     }
 
+    public abstract String getTypeName();
+
     public void setName(String name) {
-        this.typename = name;
+        this.name = name;
     }
 
     public ObstacleTypes getTypecode() {

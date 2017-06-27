@@ -15,6 +15,10 @@ public class  Construction extends Obstacle implements IObstacle{
 	public Construction(){
 	}
 
+	public String getTypeName() {
+		return "Construction";
+	}
+
 	public Construction(String name, double longitude, double latitude, double size, Date date) {
 		super(name, ObstacleTypes.CONSTRUCTION, longitude, latitude);
 		this.size = size;

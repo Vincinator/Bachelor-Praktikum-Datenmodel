@@ -32,4 +32,8 @@ public class Elevator extends Obstacle implements IObstacle {
     public void setTo(String to) {
         this.to = to;
     }
+
+    public String getTypeName() {
+        return "Elevator";
+    }
 }

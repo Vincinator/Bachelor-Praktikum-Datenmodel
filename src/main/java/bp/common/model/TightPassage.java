@@ -15,6 +15,10 @@ public class TightPassage extends Obstacle implements IObstacle {
     public TightPassage() {
     }
 
+    public String getTypeName() {
+        return "Tight Passage";
+    }
+
     public TightPassage(String name, double longitude, double latitude, double width, boolean smallerThan90cm) {
         super(name, ObstacleTypes.TIGHT_PASSAGE, longitude, latitude);
         this.width = width;

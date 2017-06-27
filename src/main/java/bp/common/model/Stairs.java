@@ -35,4 +35,9 @@ public class Stairs extends Obstacle implements IObstacle{
     public int getHeightOfStairs() {return heightOfStairs;}
 
     public void setHeightOfStairs(int heightOfStairs) {this.heightOfStairs = heightOfStairs;}
+
+    @Override
+    public String getTypeName() {
+        return "Stairs";
+    }
 }

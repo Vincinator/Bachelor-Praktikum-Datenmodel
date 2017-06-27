@@ -1,5 +1,6 @@
 package bp.common.model;
 
+
 public class Uneveness extends Obstacle implements IObstacle {
 	private double length;
 
@@ -7,8 +8,12 @@ public class Uneveness extends Obstacle implements IObstacle {
 
 	}
 
+	public String getTypeName() {
+		return "Uneveness";
+	}
+
 	public Uneveness(String name, double longitude, double latitude, double length){
-		super(name, ObstacleTypes.UNEVENESS, longitude, latitude);
+		super(name, ObstacleTypes.UNEVENNESS, longitude, latitude);
 		this.length = length;
 	}
 
