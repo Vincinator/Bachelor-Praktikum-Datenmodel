@@ -9,7 +9,8 @@ import javax.persistence.*;
 @Entity
 public abstract class Obstacle implements IObstacle {
 
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     public long getId() {
