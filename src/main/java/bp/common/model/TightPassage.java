@@ -1,5 +1,7 @@
 package bp.common.model;
 
+import bp.common.model.annotations.EditableAttribute;
+
 /**
  * Created by Bi Banh Bao on 18.05.2017.
  * this class represents tight passgage through which disable people with wheelchair
@@ -9,7 +11,9 @@ public class TightPassage extends Obstacle implements IObstacle {
     /**
      * the width of the passage
      */
+    @EditableAttribute("Passage width")
     private double width;
+    @EditableAttribute("Passage smaller Than 90cm")
     private boolean smallerThan90cm;
 
     public TightPassage() {

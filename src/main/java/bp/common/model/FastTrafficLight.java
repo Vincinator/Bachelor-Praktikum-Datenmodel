@@ -1,5 +1,7 @@
 package bp.common.model;
 
+import bp.common.model.annotations.EditableAttribute;
+
 /**
  * Created by Bi Banh Bao on 18.05.2017.
  */
@@ -7,6 +9,7 @@ public class FastTrafficLight extends Obstacle implements IObstacle {
     /**
      * duration of the traffic light in seconds
      */
+    @EditableAttribute("Duration")
     private int duration;
 
     public FastTrafficLight() {

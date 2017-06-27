@@ -1,18 +1,22 @@
 package bp.common.model;
 
 
-public class Uneveness extends Obstacle implements IObstacle {
+import bp.common.model.annotations.EditableAttribute;
+
+public class Unevenness extends Obstacle implements IObstacle {
+
+	@EditableAttribute("Unevenness length")
 	private double length;
 
-	public Uneveness(){
+	public Unevenness(){
 
 	}
 
 	public String getTypeName() {
-		return "Uneveness";
+		return "Unevenness";
 	}
 
-	public Uneveness(String name, double longitude, double latitude, double length){
+	public Unevenness(String name, double longitude, double latitude, double length){
 		super(name, ObstacleTypes.UNEVENNESS, longitude, latitude);
 		this.length = length;
 	}

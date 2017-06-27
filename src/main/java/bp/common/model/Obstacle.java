@@ -1,6 +1,8 @@
 package bp.common.model;
 
 
+import bp.common.model.annotations.EditableAttribute;
+
 import javax.persistence.*;
 
 /**
@@ -21,11 +23,16 @@ public abstract class Obstacle implements IObstacle {
         this.id = id;
     }
 
-
+    @EditableAttribute("Name")
     public String name;
+
+    @EditableAttribute("Typecode")
     public ObstacleTypes typecode;
 
+    @EditableAttribute("longitude")
     public double longitude = 49.874978;
+
+    @EditableAttribute("latitude")
     public double latitude = 8.655971;
 
     public Obstacle(){

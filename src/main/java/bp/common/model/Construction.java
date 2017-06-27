@@ -1,5 +1,7 @@
 package bp.common.model;
 
+import bp.common.model.annotations.EditableAttribute;
+
 import java.util.Date;
 
 /**
@@ -9,7 +11,10 @@ public class  Construction extends Obstacle implements IObstacle{
 	/**
 	 * attribute size describe the size in m2 of a construction
 	 */
+	@EditableAttribute("Size")
 	private double size;
+
+	@EditableAttribute("Valid Until")
 	private Date validUntil;
 
 	public Construction(){

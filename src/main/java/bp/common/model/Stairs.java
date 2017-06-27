@@ -1,9 +1,17 @@
 package bp.common.model;
 
+import bp.common.model.annotations.EditableAttribute;
+
 public class Stairs extends Obstacle implements IObstacle{
+
+    @EditableAttribute("numberOfStairs")
 	private int numberOfStairs;
+
+    @EditableAttribute("heightOfStairs")
     private int heightOfStairs;
-	private boolean handleAvailable;
+
+    @EditableAttribute("handleAvailable")
+    private boolean handleAvailable;
 
 	public Stairs(){
 
