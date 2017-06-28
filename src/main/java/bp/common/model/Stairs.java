@@ -8,7 +8,7 @@ import javax.persistence.MappedSuperclass;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="stairs")
+@Table(name="obs_stairs")
 public class Stairs extends Obstacle implements IObstacle{
 
     @EditableAttribute("numberOfStairs")

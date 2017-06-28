@@ -9,7 +9,7 @@ import javax.persistence.MappedSuperclass;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="unevenness")
+@Table(name="obs_unevenness")
 public class Unevenness extends Obstacle implements IObstacle {
 
 	@EditableAttribute("Unevenness length")

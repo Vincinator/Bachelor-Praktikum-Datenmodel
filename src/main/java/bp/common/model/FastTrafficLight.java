@@ -11,7 +11,7 @@ import javax.persistence.Table;
  * Created by Bi Banh Bao on 18.05.2017.
  */
 @Entity
-@Table(name="fasttrafficLight")
+@Table(name="obs_fasttrafficLight")
 public class FastTrafficLight extends Obstacle implements IObstacle {
     /**
      * duration of the traffic light in seconds

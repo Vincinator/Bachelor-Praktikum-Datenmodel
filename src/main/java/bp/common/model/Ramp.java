@@ -6,7 +6,7 @@ import javax.persistence.MappedSuperclass;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="ramp")
+@Table(name="obs_ramp")
 public class Ramp extends Obstacle implements IObstacle{
 
 	public Ramp(){

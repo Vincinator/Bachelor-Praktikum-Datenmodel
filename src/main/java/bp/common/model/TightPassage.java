@@ -13,7 +13,7 @@ import javax.persistence.Table;
  * are not able to pass.
  */
 @Entity
-@Table(name="tightpassage")
+@Table(name="obs_tightpassage")
 public class TightPassage extends Obstacle implements IObstacle {
     /**
      * the width of the passage

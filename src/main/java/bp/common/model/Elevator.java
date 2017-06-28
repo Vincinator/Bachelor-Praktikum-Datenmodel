@@ -12,7 +12,7 @@ import javax.persistence.Table;
  * this class represents Elevator on the street, which helps disable people mobilize.
  */
 @Entity
-@Table(name="elevator")
+@Table(name="obs_elevator")
 public class Elevator extends Obstacle implements IObstacle {
     /**
      * attribute from and to describe the 2 streets the elevator connects
