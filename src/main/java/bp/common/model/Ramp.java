@@ -2,9 +2,11 @@ package bp.common.model;
 
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
+import javax.persistence.MappedSuperclass;
+import javax.persistence.Table;
 
 @Entity
-@DiscriminatorValue("Ramp")
+@Table(name="ramp")
 public class Ramp extends Obstacle implements IObstacle{
 
 	public Ramp(){

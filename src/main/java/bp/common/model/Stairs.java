@@ -4,9 +4,11 @@ import bp.common.model.annotations.EditableAttribute;
 
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
+import javax.persistence.MappedSuperclass;
+import javax.persistence.Table;
 
 @Entity
-@DiscriminatorValue("Stairs")
+@Table(name="stairs")
 public class Stairs extends Obstacle implements IObstacle{
 
     @EditableAttribute("numberOfStairs")

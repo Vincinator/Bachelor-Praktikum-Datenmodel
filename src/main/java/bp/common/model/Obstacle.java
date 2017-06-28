@@ -10,7 +10,7 @@ import javax.persistence.*;
 /**
  * Created by Bi on 18.05.2017.
  */
-@Entity
+@MappedSuperclass
 public abstract class Obstacle {
 
     @Id

@@ -4,6 +4,8 @@ import bp.common.model.annotations.EditableAttribute;
 
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
+import javax.persistence.MappedSuperclass;
+import javax.persistence.Table;
 
 /**
  * Created by Bi Banh Bao on 18.05.2017.
@@ -11,7 +13,7 @@ import javax.persistence.Entity;
  * are not able to pass.
  */
 @Entity
-@DiscriminatorValue("TightPassage")
+@Table(name="tightpassage")
 public class TightPassage extends Obstacle implements IObstacle {
     /**
      * the width of the passage

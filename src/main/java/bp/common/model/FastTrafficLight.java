@@ -4,12 +4,14 @@ import bp.common.model.annotations.EditableAttribute;
 
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
+import javax.persistence.MappedSuperclass;
+import javax.persistence.Table;
 
 /**
  * Created by Bi Banh Bao on 18.05.2017.
  */
 @Entity
-@DiscriminatorValue("FastTrafficLight")
+@Table(name="fasttrafficLight")
 public class FastTrafficLight extends Obstacle implements IObstacle {
     /**
      * duration of the traffic light in seconds
