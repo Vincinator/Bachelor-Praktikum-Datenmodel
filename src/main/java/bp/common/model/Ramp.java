@@ -1,5 +1,10 @@
 package bp.common.model;
 
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+
+@Entity
+@DiscriminatorValue("Ramp")
 public class Ramp extends Obstacle implements IObstacle{
 
 	public Ramp(){

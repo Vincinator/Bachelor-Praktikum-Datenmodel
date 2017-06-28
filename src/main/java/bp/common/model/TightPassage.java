@@ -2,11 +2,16 @@ package bp.common.model;
 
 import bp.common.model.annotations.EditableAttribute;
 
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+
 /**
  * Created by Bi Banh Bao on 18.05.2017.
  * this class represents tight passgage through which disable people with wheelchair
  * are not able to pass.
  */
+@Entity
+@DiscriminatorValue("TightPassage")
 public class TightPassage extends Obstacle implements IObstacle {
     /**
      * the width of the passage

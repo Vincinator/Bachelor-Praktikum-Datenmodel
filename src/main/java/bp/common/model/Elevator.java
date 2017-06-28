@@ -2,10 +2,15 @@ package bp.common.model;
 
 import bp.common.model.annotations.EditableAttribute;
 
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+
 /**
  * Created by Bi Banh Bao on 18.05.2017
  * this class represents Elevator on the street, which helps disable people mobilize.
  */
+@Entity
+@DiscriminatorValue("Elevator")
 public class Elevator extends Obstacle implements IObstacle {
     /**
      * attribute from and to describe the 2 streets the elevator connects

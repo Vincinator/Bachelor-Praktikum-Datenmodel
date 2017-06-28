@@ -3,6 +3,11 @@ package bp.common.model;
 
 import bp.common.model.annotations.EditableAttribute;
 
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+
+@Entity
+@DiscriminatorValue("Unevenness")
 public class Unevenness extends Obstacle implements IObstacle {
 
 	@EditableAttribute("Unevenness length")

@@ -2,6 +2,11 @@ package bp.common.model;
 
 import bp.common.model.annotations.EditableAttribute;
 
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+
+@Entity
+@DiscriminatorValue("Stairs")
 public class Stairs extends Obstacle implements IObstacle{
 
     @EditableAttribute("numberOfStairs")

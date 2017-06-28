@@ -2,11 +2,15 @@ package bp.common.model;
 
 import bp.common.model.annotations.EditableAttribute;
 
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
 import java.util.Date;
 
 /**
  * This class represents the Obstacle Construction and is used to stored
  */
+@Entity
+@DiscriminatorValue("Construction")
 public class  Construction extends Obstacle implements IObstacle{
 	/**
 	 * attribute size describe the size in m2 of a construction
