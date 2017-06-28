@@ -11,8 +11,7 @@ import javax.persistence.*;
  * Created by Bi on 18.05.2017.
  */
 @Entity
-@JsonDeserialize(as=Stairs.class)
-public abstract class Obstacle {
+public class Obstacle {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -53,7 +52,7 @@ public abstract class Obstacle {
         return name;
     }
 
-    public abstract String getTypeName();
+    //public abstract String getTypeName();
 
     public void setName(String name) {
         this.name = name;
