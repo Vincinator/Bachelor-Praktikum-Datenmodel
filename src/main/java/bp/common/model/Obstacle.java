@@ -2,6 +2,8 @@ package bp.common.model;
 
 
 import bp.common.model.annotations.EditableAttribute;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
 import javax.persistence.*;
 
@@ -9,7 +11,8 @@ import javax.persistence.*;
  * Created by Bi on 18.05.2017.
  */
 @Entity
-public abstract class Obstacle implements IObstacle {
+@JsonDeserialize(as=Stairs.class)
+public abstract class Obstacle {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
