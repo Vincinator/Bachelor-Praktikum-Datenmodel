@@ -11,7 +11,7 @@ import javax.persistence.*;
  * Created by Bi on 18.05.2017.
  */
 @Entity
-public class Obstacle {
+public abstract class Obstacle {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -52,7 +52,7 @@ public class Obstacle {
         return name;
     }
 
-    //public abstract String getTypeName();
+    public abstract String getTypeName();
 
     public void setName(String name) {
         this.name = name;
