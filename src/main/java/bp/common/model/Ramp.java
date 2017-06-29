@@ -1,5 +1,7 @@
 package bp.common.model;
 
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
+
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.MappedSuperclass;
@@ -7,6 +9,8 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="obs_ramp")
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type")
+
 public class Ramp extends Obstacle implements IObstacle{
 
 	public Ramp(){

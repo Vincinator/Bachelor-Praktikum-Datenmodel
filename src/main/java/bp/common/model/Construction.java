@@ -1,6 +1,7 @@
 package bp.common.model;
 
 import bp.common.model.annotations.EditableAttribute;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
@@ -13,6 +14,7 @@ import java.util.Date;
  */
 @Entity
 @Table(name="obs_construction")
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type")
 
 public class  Construction extends Obstacle implements IObstacle{
 	/**
