@@ -3,6 +3,7 @@ package bp.common.model;
 
 import bp.common.model.annotations.EditableAttribute;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
@@ -12,7 +13,18 @@ import javax.persistence.*;
  * Created by Bi on 18.05.2017.
  */
 @MappedSuperclass
-@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type")
+@JsonTypeInfo(
+        use = JsonTypeInfo.Id.NAME,
+        include = JsonTypeInfo.As.PROPERTY,
+        property = "type")
+@JsonSubTypes({
+        @JsonSubTypes.Type(value = Stairs.class, name = "construction"),
+        @JsonSubTypes.Type(value = Stairs.class, name = "elevator"),
+        @JsonSubTypes.Type(value = Stairs.class, name = "fasttrafficlight"),
+        @JsonSubTypes.Type(value = Stairs.class, name = "ramp"),
+        @JsonSubTypes.Type(value = Stairs.class, name = "stairs"),
+        @JsonSubTypes.Type(value = Stairs.class, name = "tightpassage"),
+        @JsonSubTypes.Type(value = Stairs.class, name = "unevenness")})
 public abstract class Obstacle {
 
     @Id
