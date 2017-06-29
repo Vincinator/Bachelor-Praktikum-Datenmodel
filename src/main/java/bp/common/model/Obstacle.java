@@ -3,6 +3,7 @@ package bp.common.model;
 
 import bp.common.model.annotations.EditableAttribute;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
 import javax.persistence.*;
@@ -11,6 +12,7 @@ import javax.persistence.*;
  * Created by Bi on 18.05.2017.
  */
 @MappedSuperclass
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type")
 public abstract class Obstacle {
 
     @Id
