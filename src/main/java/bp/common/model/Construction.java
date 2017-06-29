@@ -14,7 +14,7 @@ import java.util.Date;
  */
 @Entity
 @Table(name="obs_construction")
-@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type")
+@JsonTypeInfo(use = JsonTypeInfo.Id.CLASS, include = JsonTypeInfo.As.PROPERTY, property = "@class")
 
 public class  Construction extends Obstacle implements IObstacle{
 	/**

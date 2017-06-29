@@ -13,10 +13,7 @@ import javax.persistence.*;
  * Created by Bi on 18.05.2017.
  */
 @MappedSuperclass
-@JsonTypeInfo(
-        use = JsonTypeInfo.Id.NAME,
-        include = JsonTypeInfo.As.PROPERTY,
-        property = "type")
+@JsonTypeInfo(use = JsonTypeInfo.Id.CLASS, include = JsonTypeInfo.As.PROPERTY, property = "@class")
 @JsonSubTypes({
         @JsonSubTypes.Type(value = Stairs.class, name = "construction"),
         @JsonSubTypes.Type(value = Stairs.class, name = "elevator"),
