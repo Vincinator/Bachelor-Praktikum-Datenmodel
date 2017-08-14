@@ -1,6 +1,7 @@
 package bp.common.model;
 
 import bp.common.model.annotations.EditableAttribute;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
 import javax.persistence.DiscriminatorValue;
@@ -11,7 +12,6 @@ import javax.persistence.Table;
 @Entity
 @Table(name="obs_stairs")
 @JsonTypeInfo(use = JsonTypeInfo.Id.CLASS, include = JsonTypeInfo.As.PROPERTY, property = "@class")
-
 public class Stairs extends Obstacle implements IObstacle{
 
     @EditableAttribute("numberOfStairs")
@@ -54,6 +54,7 @@ public class Stairs extends Obstacle implements IObstacle{
 
     public void setHeightOfStairs(int heightOfStairs) {this.heightOfStairs = heightOfStairs;}
 
+    @JsonIgnore
     @Override
     public String getTypeName() {
         return "Stairs";

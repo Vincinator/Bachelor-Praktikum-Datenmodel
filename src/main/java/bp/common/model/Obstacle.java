@@ -42,10 +42,10 @@ public abstract class Obstacle {
     @EditableAttribute("Typecode")
     public ObstacleTypes typecode;
 
-    @EditableAttribute("longitude")
+    //@EditableAttribute("longitude")
     public double longitude = 49.874978;
 
-    @EditableAttribute("latitude")
+    //@EditableAttribute("latitude")
     public double latitude = 8.655971;
 
     public Obstacle(){

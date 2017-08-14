@@ -26,6 +26,9 @@ public class Elevator extends Obstacle implements IObstacle {
     @EditableAttribute("To")
     private String to;
 
+    public Elevator(){
+
+    }
     public Elevator(String name, double longitude, double latitude, String from, String to) {
         super(name, ObstacleTypes.ELEVATOR, longitude, latitude);
         this.from = from;
