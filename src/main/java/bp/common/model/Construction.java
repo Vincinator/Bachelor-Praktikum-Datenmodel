@@ -3,9 +3,7 @@ package bp.common.model;
 import bp.common.model.annotations.EditableAttribute;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
-import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
-import javax.persistence.MappedSuperclass;
 import javax.persistence.Table;
 import java.util.Date;
 
@@ -13,45 +11,48 @@ import java.util.Date;
  * This class represents the Obstacle Construction and is used to stored
  */
 @Entity
-@Table(name="obs_construction")
+@Table(name = "obs_construction")
 @JsonTypeInfo(use = JsonTypeInfo.Id.CLASS, include = JsonTypeInfo.As.PROPERTY, property = "@class")
 
-public class  Construction extends Obstacle implements IObstacle{
-	/**
-	 * attribute size describe the size in m2 of a construction
-	 */
-	@EditableAttribute("Size")
-	private double size;
+public class Construction extends Obstacle implements IObstacle {
 
-	@EditableAttribute("Valid Until")
-	private Date validUntil;
+    public ObstacleTypes typeCode = ObstacleTypes.CONSTRUCTION;
 
-	public Construction(){
-	}
+    /**
+     * attribute size describe the size in m2 of a construction
+     */
+    @EditableAttribute("Size")
+    private double size;
 
-	public String getTypeName() {
-		return "Construction";
-	}
+    @EditableAttribute("Valid Until")
+    private Date validUntil;
 
-	public Construction(String name, double longitude, double latitude, double size, Date date) {
-		super(name, ObstacleTypes.CONSTRUCTION, longitude, latitude);
-		this.size = size;
-		this.validUntil = date;
-	}
+    public Construction() {
+    }
 
-	public double getSize() {
-		return size;
-	}
+    public Construction(String name, double longitude, double latitude, double size, Date date) {
+        super(name, longitude, latitude);
+        this.size = size;
+        this.validUntil = date;
+    }
 
-	public Date getValidUntil() {
-		return validUntil;
-	}
+    public String getTypeName() {
+        return "Construction";
+    }
 
-	public void setSize(double size) {
-		this.size = size;
-	}
+    public double getSize() {
+        return size;
+    }
 
-	public void setValidUntil(Date validUntil) {
-		this.validUntil = validUntil;
-	}
+    public void setSize(double size) {
+        this.size = size;
+    }
+
+    public Date getValidUntil() {
+        return validUntil;
+    }
+
+    public void setValidUntil(Date validUntil) {
+        this.validUntil = validUntil;
+    }
 }

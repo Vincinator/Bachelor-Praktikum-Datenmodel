@@ -2,12 +2,13 @@ package bp.common.model;
 
 
 import bp.common.model.annotations.EditableAttribute;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
-import javax.persistence.*;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
 
 /**
  * Created by Bi on 18.05.2017.
@@ -24,9 +25,26 @@ import javax.persistence.*;
         @JsonSubTypes.Type(value = Stairs.class, name = "unevenness")})
 public abstract class Obstacle {
 
+    @EditableAttribute("Name")
+    public String name;
+    //@EditableAttribute("longitude")
+    public double longitude = 49.874978;
+    //@EditableAttribute("latitude")
+    public double latitude = 8.655971;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
+
+    public Obstacle() {
+
+    }
+
+    public Obstacle(String name, double longitude, double latitude) {
+        this.name = name;
+        this.longitude = longitude;
+        this.latitude = latitude;
+    }
 
     public long getId() {
         return id;
@@ -36,46 +54,15 @@ public abstract class Obstacle {
         this.id = id;
     }
 
-    @EditableAttribute("Name")
-    public String name;
-
-    @EditableAttribute("Typecode")
-    public ObstacleTypes typecode;
-
-    //@EditableAttribute("longitude")
-    public double longitude = 49.874978;
-
-    //@EditableAttribute("latitude")
-    public double latitude = 8.655971;
-
-    public Obstacle(){
-
-    }
-
-    public Obstacle(String name, ObstacleTypes typecode, double longitude, double latitude){
-        this.name = name;
-        this.typecode = typecode;
-        this.longitude = longitude;
-        this.latitude = latitude;
-    }
-
     public String getName() {
         return name;
     }
-
-    public abstract String getTypeName();
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public ObstacleTypes getTypecode() {
-        return typecode;
-    }
-
-    public void setTypecode(ObstacleTypes code) {
-        this.typecode = code;
-    }
+    public abstract String getTypeName();
 
     public double getLatitude() {
         return latitude;

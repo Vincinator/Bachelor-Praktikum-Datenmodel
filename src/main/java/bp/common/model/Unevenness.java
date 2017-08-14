@@ -4,33 +4,35 @@ package bp.common.model;
 import bp.common.model.annotations.EditableAttribute;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
-import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
-import javax.persistence.MappedSuperclass;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="obs_unevenness")
+@Table(name = "obs_unevenness")
 @JsonTypeInfo(use = JsonTypeInfo.Id.CLASS, include = JsonTypeInfo.As.PROPERTY, property = "@class")
 public class Unevenness extends Obstacle implements IObstacle {
 
-	@EditableAttribute("Unevenness length")
-	private double length;
 
-	public Unevenness(){
+    public ObstacleTypes typeCode = ObstacleTypes.UNEVENNESS;
 
-	}
 
-	public String getTypeName() {
-		return "Unevenness";
-	}
+    @EditableAttribute("Unevenness length")
+    private double length;
 
-	public Unevenness(String name, double longitude, double latitude, double length){
-		super(name, ObstacleTypes.UNEVENNESS, longitude, latitude);
-		this.length = length;
-	}
+    public Unevenness() {
 
-	public double getLength() {
+    }
+
+    public Unevenness(String name, double longitude, double latitude, double length) {
+        super(name, longitude, latitude);
+        this.length = length;
+    }
+
+    public String getTypeName() {
+        return "Unevenness";
+    }
+
+    public double getLength() {
         return length;
     }
 

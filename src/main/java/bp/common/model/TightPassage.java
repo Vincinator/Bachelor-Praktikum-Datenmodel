@@ -3,9 +3,7 @@ package bp.common.model;
 import bp.common.model.annotations.EditableAttribute;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
-import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
-import javax.persistence.MappedSuperclass;
 import javax.persistence.Table;
 
 /**
@@ -14,10 +12,14 @@ import javax.persistence.Table;
  * are not able to pass.
  */
 @Entity
-@Table(name="obs_tightpassage")
+@Table(name = "obs_tightpassage")
 @JsonTypeInfo(use = JsonTypeInfo.Id.CLASS, include = JsonTypeInfo.As.PROPERTY, property = "@class")
 
 public class TightPassage extends Obstacle implements IObstacle {
+
+    public ObstacleTypes typeCode = ObstacleTypes.TIGHT_PASSAGE;
+
+
     /**
      * the width of the passage
      */
@@ -29,14 +31,14 @@ public class TightPassage extends Obstacle implements IObstacle {
     public TightPassage() {
     }
 
-    public String getTypeName() {
-        return "Tight Passage";
-    }
-
     public TightPassage(String name, double longitude, double latitude, double width, boolean smallerThan90cm) {
-        super(name, ObstacleTypes.TIGHT_PASSAGE, longitude, latitude);
+        super(name, longitude, latitude);
         this.width = width;
         this.smallerThan90cm = smallerThan90cm;
+    }
+
+    public String getTypeName() {
+        return "Tight Passage";
     }
 
     public double getWidth() {
