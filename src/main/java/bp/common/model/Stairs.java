@@ -13,14 +13,10 @@ import javax.persistence.Table;
 public class Stairs extends Obstacle implements IObstacle {
 
     public ObstacleTypes typeCode = ObstacleTypes.STAIRS;
-
-
     @EditableAttribute("numberOfStairs")
     private int numberOfStairs;
-
     @EditableAttribute("heightOfStairs")
     private int heightOfStairs;
-
     @EditableAttribute("handleAvailable")
     private boolean handleAvailable;
 
@@ -33,6 +29,11 @@ public class Stairs extends Obstacle implements IObstacle {
         this.numberOfStairs = numberOfStairs;
         this.heightOfStairs = heightOfStairs;
         this.handleAvailable = handleAvailable;
+    }
+
+    @Override
+    public ObstacleTypes getTypeCode() {
+        return typeCode;
     }
 
     public int getNumberOfStairs() {

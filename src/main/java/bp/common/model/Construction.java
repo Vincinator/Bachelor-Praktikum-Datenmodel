@@ -17,13 +17,11 @@ import java.util.Date;
 public class Construction extends Obstacle implements IObstacle {
 
     public ObstacleTypes typeCode = ObstacleTypes.CONSTRUCTION;
-
     /**
      * attribute size describe the size in m2 of a construction
      */
     @EditableAttribute("Size")
     private double size;
-
     @EditableAttribute("Valid Until")
     private Date validUntil;
 
@@ -34,6 +32,11 @@ public class Construction extends Obstacle implements IObstacle {
         super(name, longitude, latitude);
         this.size = size;
         this.validUntil = date;
+    }
+
+    @Override
+    public ObstacleTypes getTypeCode() {
+        return typeCode;
     }
 
     public String getTypeName() {

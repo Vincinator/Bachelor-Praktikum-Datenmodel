@@ -14,8 +14,6 @@ public class Unevenness extends Obstacle implements IObstacle {
 
 
     public ObstacleTypes typeCode = ObstacleTypes.UNEVENNESS;
-
-
     @EditableAttribute("Unevenness length")
     private double length;
 
@@ -26,6 +24,11 @@ public class Unevenness extends Obstacle implements IObstacle {
     public Unevenness(String name, double longitude, double latitude, double length) {
         super(name, longitude, latitude);
         this.length = length;
+    }
+
+    @Override
+    public ObstacleTypes getTypeCode() {
+        return typeCode;
     }
 
     public String getTypeName() {

@@ -17,13 +17,11 @@ import javax.persistence.Table;
 public class Elevator extends Obstacle implements IObstacle {
 
     public ObstacleTypes typeCode = ObstacleTypes.ELEVATOR;
-
     /**
      * attribute from and to describe the 2 streets the elevator connects
      */
     @EditableAttribute("From")
     private String from;
-
     @EditableAttribute("To")
     private String to;
 
@@ -35,6 +33,11 @@ public class Elevator extends Obstacle implements IObstacle {
         super(name, longitude, latitude);
         this.from = from;
         this.to = to;
+    }
+
+    @Override
+    public ObstacleTypes getTypeCode() {
+        return typeCode;
     }
 
     public String getFrom() {

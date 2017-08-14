@@ -16,8 +16,6 @@ import javax.persistence.Table;
 public class FastTrafficLight extends Obstacle implements IObstacle {
 
     public ObstacleTypes typeCode = ObstacleTypes.FAST_TRAFFIC_LIGHT;
-
-
     /**
      * duration of the traffic light in seconds
      */
@@ -30,6 +28,11 @@ public class FastTrafficLight extends Obstacle implements IObstacle {
     public FastTrafficLight(String name, double longitude, double latitude, int duration) {
         super(name, longitude, latitude);
         this.duration = duration;
+    }
+
+    @Override
+    public ObstacleTypes getTypeCode() {
+        return typeCode;
     }
 
     public String getTypeName() {

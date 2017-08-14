@@ -62,6 +62,8 @@ public abstract class Obstacle {
         this.name = name;
     }
 
+    public abstract ObstacleTypes getTypeCode();
+
     public abstract String getTypeName();
 
     public double getLatitude() {

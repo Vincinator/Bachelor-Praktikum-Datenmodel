@@ -18,8 +18,6 @@ import javax.persistence.Table;
 public class TightPassage extends Obstacle implements IObstacle {
 
     public ObstacleTypes typeCode = ObstacleTypes.TIGHT_PASSAGE;
-
-
     /**
      * the width of the passage
      */
@@ -27,7 +25,6 @@ public class TightPassage extends Obstacle implements IObstacle {
     private double width;
     @EditableAttribute("Passage smaller Than 90cm")
     private boolean smallerThan90cm;
-
     public TightPassage() {
     }
 
@@ -35,6 +32,11 @@ public class TightPassage extends Obstacle implements IObstacle {
         super(name, longitude, latitude);
         this.width = width;
         this.smallerThan90cm = smallerThan90cm;
+    }
+
+    @Override
+    public ObstacleTypes getTypeCode() {
+        return typeCode;
     }
 
     public String getTypeName() {

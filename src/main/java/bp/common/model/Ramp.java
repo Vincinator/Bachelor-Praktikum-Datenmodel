@@ -13,6 +13,7 @@ public class Ramp extends Obstacle implements IObstacle {
 
     public ObstacleTypes typeCode = ObstacleTypes.RAMP;
 
+
     public Ramp() {
     }
 
@@ -20,6 +21,10 @@ public class Ramp extends Obstacle implements IObstacle {
         super(name, longitude, latitude);
     }
 
+    @Override
+    public ObstacleTypes getTypeCode() {
+        return typeCode;
+    }
 
     @Override
     public String getTypeName() {
