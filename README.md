@@ -14,8 +14,6 @@ Desweiterne enthält das Projekt die notwendigen Annotationen um diese über Jac
 
 
 
-
-
 # Anleitung
 
 ## Import
@@ -81,7 +79,7 @@ dependencies {
 
 ### Serialize
 
-```
+```java
     ObjectMapper mapper = new ObjectMapper();
     String jsonString = "";
     try {
@@ -92,7 +90,7 @@ dependencies {
 ```
 
 ### Deserialize
-```
+```java
 ObjectMapper mapper = new ObjectMapper();
 mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
 List<Obstacle> obstacleList = new LinkedList<Obstacle>();
