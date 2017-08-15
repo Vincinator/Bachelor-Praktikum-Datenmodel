@@ -14,7 +14,7 @@ import java.util.Date;
  * This class represents the Obstacle Construction and is used to stored
  */
 @Entity
-@DiscriminatorValue(value = "Construction")
+@DiscriminatorValue(value = "construction")
 @JsonTypeInfo(use = JsonTypeInfo.Id.CLASS, include = JsonTypeInfo.As.PROPERTY, property = "@class")
 public class Construction extends Obstacle implements IObstacle {
 

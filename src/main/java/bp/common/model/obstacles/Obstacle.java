@@ -12,9 +12,9 @@ import javax.persistence.*;
  * Created by Bi on 18.05.2017.
  */
 @Entity
-@Table(name = "OBSTACLE")
+@Table(name = "obstacle")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name = "OBSTACLE_TYPE")
+@DiscriminatorColumn(name = "obstacle_type")
 @JsonTypeInfo(use = JsonTypeInfo.Id.CLASS, include = JsonTypeInfo.As.PROPERTY, property = "@class")
 @JsonSubTypes({
         @JsonSubTypes.Type(value = Stairs.class, name = "construction"),

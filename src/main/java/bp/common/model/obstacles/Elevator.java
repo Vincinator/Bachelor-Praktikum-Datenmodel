@@ -14,7 +14,7 @@ import javax.persistence.Table;
  * this class represents Elevator on the street, which helps disable people mobilize.
  */
 @Entity
-@DiscriminatorValue(value = "Elevator")
+@DiscriminatorValue(value = "elevator")
 
 @JsonTypeInfo(use = JsonTypeInfo.Id.CLASS, include = JsonTypeInfo.As.PROPERTY, property = "@class")
 

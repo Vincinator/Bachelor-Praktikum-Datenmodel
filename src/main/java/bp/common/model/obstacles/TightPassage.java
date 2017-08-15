@@ -15,7 +15,7 @@ import javax.persistence.Table;
  * are not able to pass.
  */
 @Entity
-@DiscriminatorValue(value = "TightPassage")
+@DiscriminatorValue(value = "tightpassage")
 
 @JsonTypeInfo(use = JsonTypeInfo.Id.CLASS, include = JsonTypeInfo.As.PROPERTY, property = "@class")
 
