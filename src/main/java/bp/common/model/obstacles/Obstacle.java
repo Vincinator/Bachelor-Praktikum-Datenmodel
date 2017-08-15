@@ -12,7 +12,9 @@ import javax.persistence.*;
  * Created by Bi on 18.05.2017.
  */
 @Entity
+@Table(name = "OBSTACLE")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "OBSTACLE_TYPE")
 @JsonTypeInfo(use = JsonTypeInfo.Id.CLASS, include = JsonTypeInfo.As.PROPERTY, property = "@class")
 @JsonSubTypes({
         @JsonSubTypes.Type(value = Stairs.class, name = "construction"),
@@ -30,8 +32,10 @@ public abstract class Obstacle {
     public double longitude = 49.874978;
     //@EditableAttribute("latitude")
     public double latitude = 8.655971;
+
+    @TableGenerator(name = "OBSTACLE_GEN", table = "ID_GEN", pkColumnName = "GEN_NAME", valueColumnName = "GEN_VAL", allocationSize = 1)
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.TABLE, generator = "OBSTACLE_GEN")
     private long id;
 
 
