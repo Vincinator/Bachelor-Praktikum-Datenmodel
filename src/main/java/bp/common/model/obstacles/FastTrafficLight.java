@@ -14,7 +14,7 @@ import javax.persistence.Entity;
 @Entity
 @DiscriminatorValue(value = "fasttrafficlight")
 
-@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type")
+@JsonTypeInfo(use = JsonTypeInfo.Id.CLASS, include = JsonTypeInfo.As.PROPERTY, property = "@class")
 public class FastTrafficLight extends Obstacle implements IObstacle {
 
     public ObstacleTypes typeCode = ObstacleTypes.FAST_TRAFFIC_LIGHT;

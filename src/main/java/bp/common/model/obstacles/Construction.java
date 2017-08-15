@@ -39,7 +39,7 @@ public class Construction extends Obstacle implements IObstacle {
     public ObstacleTypes getTypeCode() {
         return typeCode;
     }
-    
+
     public double getSize() {
         return mSize;
     }
