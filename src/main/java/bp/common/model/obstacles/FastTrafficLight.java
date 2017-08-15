@@ -13,9 +13,7 @@ import javax.persistence.Table;
  * Created by Bi Banh Bao on 18.05.2017.
  */
 @Entity
-@DiscriminatorValue("FASTTRAFFICLIGHT")
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type")
-
 public class FastTrafficLight extends Obstacle implements IObstacle {
 
     public ObstacleTypes typeCode = ObstacleTypes.FAST_TRAFFIC_LIGHT;
