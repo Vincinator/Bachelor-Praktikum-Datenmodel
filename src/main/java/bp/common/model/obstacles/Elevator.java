@@ -1,8 +1,11 @@
-package bp.common.model;
+package bp.common.model.obstacles;
 
+import bp.common.model.IObstacle;
+import bp.common.model.ObstacleTypes;
 import bp.common.model.annotations.EditableAttribute;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
@@ -11,7 +14,7 @@ import javax.persistence.Table;
  * this class represents Elevator on the street, which helps disable people mobilize.
  */
 @Entity
-@Table(name = "obs_elevator")
+@DiscriminatorValue("ELEVATOR")
 @JsonTypeInfo(use = JsonTypeInfo.Id.CLASS, include = JsonTypeInfo.As.PROPERTY, property = "@class")
 
 public class Elevator extends Obstacle implements IObstacle {

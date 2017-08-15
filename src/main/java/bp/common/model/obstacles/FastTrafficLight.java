@@ -1,8 +1,11 @@
-package bp.common.model;
+package bp.common.model.obstacles;
 
+import bp.common.model.IObstacle;
+import bp.common.model.ObstacleTypes;
 import bp.common.model.annotations.EditableAttribute;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
@@ -10,7 +13,7 @@ import javax.persistence.Table;
  * Created by Bi Banh Bao on 18.05.2017.
  */
 @Entity
-@Table(name = "obs_fasttrafficLight")
+@DiscriminatorValue("FASTTRAFFICLIGHT")
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type")
 
 public class FastTrafficLight extends Obstacle implements IObstacle {

@@ -1,14 +1,17 @@
-package bp.common.model;
+package bp.common.model.obstacles;
 
 
+import bp.common.model.IObstacle;
+import bp.common.model.ObstacleTypes;
 import bp.common.model.annotations.EditableAttribute;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "obs_unevenness")
+@DiscriminatorValue("UNEVENNESS")
 @JsonTypeInfo(use = JsonTypeInfo.Id.CLASS, include = JsonTypeInfo.As.PROPERTY, property = "@class")
 public class Unevenness extends Obstacle implements IObstacle {
 

@@ -1,8 +1,11 @@
-package bp.common.model;
+package bp.common.model.obstacles;
 
+import bp.common.model.IObstacle;
+import bp.common.model.ObstacleTypes;
 import bp.common.model.annotations.EditableAttribute;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import java.util.Date;
@@ -11,7 +14,7 @@ import java.util.Date;
  * This class represents the Obstacle Construction and is used to stored
  */
 @Entity
-@Table(name = "obs_construction")
+@DiscriminatorValue("CONSTRUCTION")
 @JsonTypeInfo(use = JsonTypeInfo.Id.CLASS, include = JsonTypeInfo.As.PROPERTY, property = "@class")
 
 public class Construction extends Obstacle implements IObstacle {

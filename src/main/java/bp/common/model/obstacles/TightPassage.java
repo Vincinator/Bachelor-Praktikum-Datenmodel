@@ -1,8 +1,11 @@
-package bp.common.model;
+package bp.common.model.obstacles;
 
+import bp.common.model.IObstacle;
+import bp.common.model.ObstacleTypes;
 import bp.common.model.annotations.EditableAttribute;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
@@ -12,7 +15,7 @@ import javax.persistence.Table;
  * are not able to pass.
  */
 @Entity
-@Table(name = "obs_tightpassage")
+@DiscriminatorValue("TIGHTPASSAGE")
 @JsonTypeInfo(use = JsonTypeInfo.Id.CLASS, include = JsonTypeInfo.As.PROPERTY, property = "@class")
 
 public class TightPassage extends Obstacle implements IObstacle {

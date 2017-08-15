@@ -31,7 +31,7 @@ Ebenfalls in der pom.xml die Dependency zu diesem GitHub Projekt hinzufügen
 
 
 ```java
-import bp.common.model.Obstacle;
+import bp.common.model.obstacles.Obstacle;
 ```
 .. oder über Alt+Enter von Intelij den import hinschreiben lassen ;)
 
