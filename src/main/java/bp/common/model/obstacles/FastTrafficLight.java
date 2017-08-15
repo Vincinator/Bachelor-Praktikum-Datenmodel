@@ -37,10 +37,6 @@ public class FastTrafficLight extends Obstacle implements IObstacle {
         return typeCode;
     }
 
-    public String getTypeName() {
-        return "FastTrafficLight";
-    }
-
     public int getDuration() {
         return mDuration;
     }

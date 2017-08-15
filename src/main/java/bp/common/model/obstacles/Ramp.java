@@ -28,8 +28,4 @@ public class Ramp extends Obstacle implements IObstacle {
         return typeCode;
     }
 
-    @Override
-    public String getTypeName() {
-        return "Ramp";
-    }
 }

@@ -34,10 +34,6 @@ public class Unevenness extends Obstacle implements IObstacle {
         return typeCode;
     }
 
-    public String getTypeName() {
-        return "Unevenness";
-    }
-
     public double getLength() {
         return mLength;
     }

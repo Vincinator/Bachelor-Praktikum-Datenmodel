@@ -59,7 +59,4 @@ public class Elevator extends Obstacle implements IObstacle {
         this.mTo = mTo;
     }
 
-    public String getTypeName() {
-        return "Elevator";
-    }
 }

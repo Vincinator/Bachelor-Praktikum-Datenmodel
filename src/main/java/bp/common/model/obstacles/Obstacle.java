@@ -18,13 +18,13 @@ import javax.persistence.*;
 @DiscriminatorValue("dummy")
 @JsonTypeInfo(use = JsonTypeInfo.Id.CLASS, include = JsonTypeInfo.As.PROPERTY, property = "@class")
 @JsonSubTypes({
-        @JsonSubTypes.Type(value = Stairs.class, name = "construction"),
-        @JsonSubTypes.Type(value = Stairs.class, name = "elevator"),
-        @JsonSubTypes.Type(value = Stairs.class, name = "fasttrafficlight"),
-        @JsonSubTypes.Type(value = Stairs.class, name = "ramp"),
+        @JsonSubTypes.Type(value = Construction.class, name = "construction"),
+        @JsonSubTypes.Type(value = Elevator.class, name = "elevator"),
+        @JsonSubTypes.Type(value = FastTrafficLight.class, name = "fasttrafficlight"),
+        @JsonSubTypes.Type(value = Ramp.class, name = "ramp"),
         @JsonSubTypes.Type(value = Stairs.class, name = "stairs"),
-        @JsonSubTypes.Type(value = Stairs.class, name = "tightpassage"),
-        @JsonSubTypes.Type(value = Stairs.class, name = "unevenness")})
+        @JsonSubTypes.Type(value = TightPassage.class, name = "tightpassage"),
+        @JsonSubTypes.Type(value = Unevenness.class, name = "unevenness")})
 public abstract class Obstacle {
 
     @EditableAttribute("Name")
@@ -68,7 +68,6 @@ public abstract class Obstacle {
 
     public abstract ObstacleTypes getTypeCode();
 
-    public abstract String getTypeName();
 
     public double getLatitude() {
         return latitude;

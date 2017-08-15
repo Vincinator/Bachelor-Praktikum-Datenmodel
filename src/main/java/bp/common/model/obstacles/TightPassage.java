@@ -40,9 +40,6 @@ public class TightPassage extends Obstacle implements IObstacle {
         return typeCode;
     }
 
-    public String getTypeName() {
-        return "Tight Passage";
-    }
 
     public double getWidth() {
         return mWidth;

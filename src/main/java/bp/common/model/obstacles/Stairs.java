@@ -62,9 +62,5 @@ public class Stairs extends Obstacle implements IObstacle {
         this.mHeightOfStairs = heightOfStairs;
     }
 
-    @JsonIgnore
-    @Override
-    public String getTypeName() {
-        return "Stairs";
-    }
+
 }
