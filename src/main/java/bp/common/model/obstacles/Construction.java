@@ -29,6 +29,8 @@ public class Construction extends Obstacle implements IObstacle {
     public Construction() {
     }
 
+
+
     public Construction(String name, double longitude, double latitude, double mSize, Date date) {
         super(name, longitude, latitude);
         this.mSize = mSize;
