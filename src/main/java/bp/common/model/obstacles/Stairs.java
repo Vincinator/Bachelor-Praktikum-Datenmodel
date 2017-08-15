@@ -8,7 +8,6 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
-import javax.persistence.Table;
 
 @Entity
 @DiscriminatorValue(value = "stairs")
@@ -16,12 +15,12 @@ import javax.persistence.Table;
 public class Stairs extends Obstacle implements IObstacle {
 
     public ObstacleTypes typeCode = ObstacleTypes.STAIRS;
-    @EditableAttribute("numberOfStairs")
-    private int numberOfStairs;
-    @EditableAttribute("heightOfStairs")
-    private int heightOfStairs;
-    @EditableAttribute("handleAvailable")
-    private boolean handleAvailable;
+    @EditableAttribute("mNumberOfStairs")
+    private int mNumberOfStairs;
+    @EditableAttribute("mHeightOfStairs")
+    private int mHeightOfStairs;
+    @EditableAttribute("mHandleAvailable")
+    private boolean mHandleAvailable;
 
     public Stairs() {
 
@@ -29,9 +28,9 @@ public class Stairs extends Obstacle implements IObstacle {
 
     public Stairs(String name, double longitude, double latitude, int numberOfStairs, int heightOfStairs, boolean handleAvailable) {
         super(name, longitude, latitude);
-        this.numberOfStairs = numberOfStairs;
-        this.heightOfStairs = heightOfStairs;
-        this.handleAvailable = handleAvailable;
+        this.mNumberOfStairs = numberOfStairs;
+        this.mHeightOfStairs = heightOfStairs;
+        this.mHandleAvailable = handleAvailable;
     }
 
     @Override
@@ -40,27 +39,27 @@ public class Stairs extends Obstacle implements IObstacle {
     }
 
     public int getNumberOfStairs() {
-        return numberOfStairs;
+        return mNumberOfStairs;
     }
 
     public void setNumberOfStairs(int num) {
-        this.numberOfStairs = num;
+        this.mNumberOfStairs = num;
     }
 
     public boolean getHandleAvailable() {
-        return handleAvailable;
+        return mHandleAvailable;
     }
 
     public void setHandleAvailable(boolean bool) {
-        this.handleAvailable = bool;
+        this.mHandleAvailable = bool;
     }
 
     public int getHeightOfStairs() {
-        return heightOfStairs;
+        return mHeightOfStairs;
     }
 
     public void setHeightOfStairs(int heightOfStairs) {
-        this.heightOfStairs = heightOfStairs;
+        this.mHeightOfStairs = heightOfStairs;
     }
 
     @JsonIgnore

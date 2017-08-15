@@ -8,7 +8,6 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
-import javax.persistence.Table;
 
 @Entity
 @DiscriminatorValue(value = "unevenness")
@@ -18,16 +17,16 @@ public class Unevenness extends Obstacle implements IObstacle {
 
 
     public ObstacleTypes typeCode = ObstacleTypes.UNEVENNESS;
-    @EditableAttribute("Unevenness length")
-    private double length;
+    @EditableAttribute("Unevenness mLength")
+    private double mLength;
 
     public Unevenness() {
 
     }
 
-    public Unevenness(String name, double longitude, double latitude, double length) {
+    public Unevenness(String name, double longitude, double latitude, double mLength) {
         super(name, longitude, latitude);
-        this.length = length;
+        this.mLength = mLength;
     }
 
     @Override
@@ -40,10 +39,10 @@ public class Unevenness extends Obstacle implements IObstacle {
     }
 
     public double getLength() {
-        return length;
+        return mLength;
     }
 
     public void setLength(double num) {
-        this.length = num;
+        this.mLength = num;
     }
 }

@@ -7,7 +7,6 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
-import javax.persistence.Table;
 
 /**
  * Created by Bi Banh Bao on 18.05.2017.
@@ -23,19 +22,17 @@ public class TightPassage extends Obstacle implements IObstacle {
 
     public ObstacleTypes typeCode = ObstacleTypes.TIGHT_PASSAGE;
     /**
-     * the width of the passage
+     * the mWidth of the passage
      */
-    @EditableAttribute("Passage width")
-    private double width;
-    @EditableAttribute("Passage smaller Than 90cm")
-    private boolean smallerThan90cm;
+    @EditableAttribute("Passage mWidth")
+    private double mWidth;
+
     public TightPassage() {
     }
 
     public TightPassage(String name, double longitude, double latitude, double width, boolean smallerThan90cm) {
         super(name, longitude, latitude);
-        this.width = width;
-        this.smallerThan90cm = smallerThan90cm;
+        this.mWidth = width;
     }
 
     @Override
@@ -48,18 +45,11 @@ public class TightPassage extends Obstacle implements IObstacle {
     }
 
     public double getWidth() {
-        return width;
+        return mWidth;
     }
 
-    public void setWidth(double width) {
-        this.width = width;
+    public void setWidth(double mWidth) {
+        this.mWidth = mWidth;
     }
 
-    public boolean isSmallerThan90cm() {
-        return smallerThan90cm;
-    }
-
-    public void setSmallerThan90cm(boolean smallerThan90cm) {
-        this.smallerThan90cm = smallerThan90cm;
-    }
 }

@@ -12,9 +12,10 @@ import javax.persistence.*;
  * Created by Bi on 18.05.2017.
  */
 @Entity
-@Table(name = "obstacle")
+@Table(name = "OBSTACLE")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name = "obstacle_type")
+@DiscriminatorColumn(name = "OBSTACLE_TYPE", discriminatorType = DiscriminatorType.STRING)
+@DiscriminatorValue("dummy")
 @JsonTypeInfo(use = JsonTypeInfo.Id.CLASS, include = JsonTypeInfo.As.PROPERTY, property = "@class")
 @JsonSubTypes({
         @JsonSubTypes.Type(value = Stairs.class, name = "construction"),
@@ -27,7 +28,7 @@ import javax.persistence.*;
 public abstract class Obstacle {
 
     @EditableAttribute("Name")
-    public String name;
+    public String mName;
     //@EditableAttribute("longitude")
     public double longitude = 49.874978;
     //@EditableAttribute("latitude")
@@ -43,8 +44,8 @@ public abstract class Obstacle {
 
     }
 
-    public Obstacle(String name, double longitude, double latitude) {
-        this.name = name;
+    public Obstacle(String mName, double longitude, double latitude) {
+        this.mName = mName;
         this.longitude = longitude;
         this.latitude = latitude;
     }
@@ -58,11 +59,11 @@ public abstract class Obstacle {
     }
 
     public String getName() {
-        return name;
+        return mName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setName(String mName) {
+        this.mName = mName;
     }
 
     public abstract ObstacleTypes getTypeCode();

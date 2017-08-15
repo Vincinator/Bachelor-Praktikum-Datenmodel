@@ -7,7 +7,6 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
-import javax.persistence.Table;
 import java.util.Date;
 
 /**
@@ -20,20 +19,20 @@ public class Construction extends Obstacle implements IObstacle {
 
     public ObstacleTypes typeCode = ObstacleTypes.CONSTRUCTION;
     /**
-     * attribute size describe the size in m2 of a construction
+     * attribute mSize describe the mSize in m2 of a construction
      */
     @EditableAttribute("Size")
-    private double size;
+    private double mSize;
     @EditableAttribute("Valid Until")
-    private Date validUntil;
+    private Date mValidUntil;
 
     public Construction() {
     }
 
-    public Construction(String name, double longitude, double latitude, double size, Date date) {
+    public Construction(String name, double longitude, double latitude, double mSize, Date date) {
         super(name, longitude, latitude);
-        this.size = size;
-        this.validUntil = date;
+        this.mSize = mSize;
+        this.mValidUntil = date;
     }
 
     @Override
@@ -46,18 +45,18 @@ public class Construction extends Obstacle implements IObstacle {
     }
 
     public double getSize() {
-        return size;
+        return mSize;
     }
 
-    public void setSize(double size) {
-        this.size = size;
+    public void setSize(double mSize) {
+        this.mSize = mSize;
     }
 
     public Date getValidUntil() {
-        return validUntil;
+        return mValidUntil;
     }
 
-    public void setValidUntil(Date validUntil) {
-        this.validUntil = validUntil;
+    public void setValidUntil(Date mValidUntil) {
+        this.mValidUntil = mValidUntil;
     }
 }

@@ -7,7 +7,6 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
-import javax.persistence.Table;
 
 /**
  * Created by Bi Banh Bao on 18.05.2017.
@@ -20,17 +19,17 @@ public class FastTrafficLight extends Obstacle implements IObstacle {
 
     public ObstacleTypes typeCode = ObstacleTypes.FAST_TRAFFIC_LIGHT;
     /**
-     * duration of the traffic light in seconds
+     * mDuration of the traffic light in seconds
      */
     @EditableAttribute("Duration")
-    private int duration;
+    private int mDuration;
 
     public FastTrafficLight() {
     }
 
-    public FastTrafficLight(String name, double longitude, double latitude, int duration) {
+    public FastTrafficLight(String name, double longitude, double latitude, int mDuration) {
         super(name, longitude, latitude);
-        this.duration = duration;
+        this.mDuration = mDuration;
     }
 
     @Override
@@ -43,10 +42,10 @@ public class FastTrafficLight extends Obstacle implements IObstacle {
     }
 
     public int getDuration() {
-        return duration;
+        return mDuration;
     }
 
-    public void setDuration(int duration) {
-        this.duration = duration;
+    public void setDuration(int mDuration) {
+        this.mDuration = mDuration;
     }
 }

@@ -7,7 +7,6 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
-import javax.persistence.Table;
 
 /**
  * Created by Bi Banh Bao on 18.05.2017
@@ -22,21 +21,21 @@ public class Elevator extends Obstacle implements IObstacle {
 
     public ObstacleTypes typeCode = ObstacleTypes.ELEVATOR;
     /**
-     * attribute from and to describe the 2 streets the elevator connects
+     * attribute mFrom and mTo describe the 2 streets the elevator connects
      */
     @EditableAttribute("From")
-    private String from;
+    private String mFrom;
     @EditableAttribute("To")
-    private String to;
+    private String mTo;
 
     public Elevator() {
 
     }
 
-    public Elevator(String name, double longitude, double latitude, String from, String to) {
+    public Elevator(String name, double longitude, double latitude, String mFrom, String mTo) {
         super(name, longitude, latitude);
-        this.from = from;
-        this.to = to;
+        this.mFrom = mFrom;
+        this.mTo = mTo;
     }
 
     @Override
@@ -45,19 +44,19 @@ public class Elevator extends Obstacle implements IObstacle {
     }
 
     public String getFrom() {
-        return from;
+        return mFrom;
     }
 
-    public void setFrom(String from) {
-        this.from = from;
+    public void setFrom(String mFrom) {
+        this.mFrom = mFrom;
     }
 
     public String getTo() {
-        return to;
+        return mTo;
     }
 
-    public void setTo(String to) {
-        this.to = to;
+    public void setTo(String mTo) {
+        this.mTo = mTo;
     }
 
     public String getTypeName() {
