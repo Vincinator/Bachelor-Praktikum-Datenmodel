@@ -95,5 +95,27 @@ public abstract class Obstacle {
         this.longitude = longitude;
     }
 
+    public long getId_way() {
+        return id_way;
+    }
 
+    public void setId_way(long id_way) {
+        this.id_way = id_way;
+    }
+
+    public long getId_firstnode() {
+        return id_firstnode;
+    }
+
+    public void setId_firstnode(long id_firstnode) {
+        this.id_firstnode = id_firstnode;
+    }
+
+    public long getId_lastnode() {
+        return id_lastnode;
+    }
+
+    public void setId_lastnode(long id_lastnode) {
+        this.id_lastnode = id_lastnode;
+    }
 }
