@@ -34,6 +34,16 @@ public abstract class Obstacle {
     //@EditableAttribute("latitude")
     public double latitude = 8.655971;
 
+    /**
+     * osm id of the way this obstacle is on
+     */
+    public long id_way;
+    /**
+     * 2 ids of 2 nodes which this Obstacle lies between
+     */
+    public long id_firstnode;
+    public long id_lastnode;
+
     @TableGenerator(name = "OBSTACLE_GEN", table = "ID_GEN", pkColumnName = "GEN_NAME", valueColumnName = "GEN_VAL", allocationSize = 1)
     @Id
     @GeneratedValue(strategy = GenerationType.TABLE, generator = "OBSTACLE_GEN")
