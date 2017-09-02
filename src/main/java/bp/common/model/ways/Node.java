@@ -7,7 +7,7 @@ import javax.persistence.*;
  * Created by Bi on 01.09.2017.
  */
 @Entity
-@Table(name = "WAYS")
+@Table(name = "NODES")
 public class Node {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
