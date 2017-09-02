@@ -25,6 +25,7 @@ public class Way {
      * list of node instead of GeoPoint
      */
 
+    public Way(){}
     /**
      * Contructor for Way Object
      * @param name name of the street
@@ -65,5 +66,15 @@ public class Way {
 
     public void setHighway(String highway) {
         this.highway = highway;
+    }
+
+    @Override
+    public String toString() {
+        return "Way{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", nodes=" + nodes +
+                ", highway='" + highway + '\'' +
+                '}';
     }
 }

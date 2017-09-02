@@ -8,6 +8,7 @@ public class Node {
     private double longitude = 49.874978;
     private double latitude = 8.655971;
 
+    public Node(){}
     /**
      * specify lat and long when creating an object
      * @param latitude
@@ -40,5 +41,14 @@ public class Node {
 
     public void setLatitude(double latitude) {
         this.latitude = latitude;
+    }
+
+    @Override
+    public String toString() {
+        return "Node{" +
+                "id=" + id +
+                ", longitude=" + longitude +
+                ", latitude=" + latitude +
+                '}';
     }
 }
