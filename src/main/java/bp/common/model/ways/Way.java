@@ -1,5 +1,7 @@
 package bp.common.model.ways;
 
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
+
 import javax.persistence.*;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -10,6 +12,7 @@ import java.util.List;
  */
 @Entity
 @Table(name = "WAYS")
+@JsonTypeInfo(use = JsonTypeInfo.Id.CLASS, include = JsonTypeInfo.As.PROPERTY, property = "@class")
 public class Way {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
