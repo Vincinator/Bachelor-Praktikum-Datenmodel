@@ -1,16 +1,18 @@
 package bp.common.model.ways;
 
+import javax.persistence.*;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Used for parsing the response from overpass api.
- *
- * Used by OsmParser
+ * Class used by Jackson and Hibernate
  */
+@Entity
+@Table(name = "WAYS")
 public class Way {
-
+    @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
     public long id;
     /**
      * The name of the road to display in the details view of the road.
