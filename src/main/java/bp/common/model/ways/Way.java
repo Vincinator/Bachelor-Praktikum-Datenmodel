@@ -19,7 +19,7 @@ public class Way {
      * The name of the road to display in the details view of the road.
      */
     public String name = "";
-    private ArrayList<Node> nodes = new ArrayList<Node>();
+    private List<Node> nodes = new ArrayList<Node>();
     /**
      * value of highway tags
      */
@@ -58,7 +58,7 @@ public class Way {
     }
 
     @OneToMany
-    public ArrayList<Node> getNodes() {
+    public List<Node> getNodes() {
         return nodes;
     }
 
