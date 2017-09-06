@@ -57,7 +57,7 @@ public class Way {
         this.name = name;
     }
 
-    @OneToMany
+    @OneToMany(cascade = {CascadeType.ALL})
     public List<Node> getNodes() {
         return nodes;
     }
