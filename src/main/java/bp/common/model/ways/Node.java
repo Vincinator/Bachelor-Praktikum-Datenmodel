@@ -27,10 +27,9 @@ public class Node {
      * @param latitude
      * @param longitude
      */
-    public Node(double latitude, double longitude, Way way){
+    public Node(double latitude, double longitude){
         this.latitude = latitude;
         this.longitude = longitude;
-        this.way = way;
     }
 
     public long getId() {
