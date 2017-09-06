@@ -12,8 +12,7 @@ import javax.persistence.*;
 @Table(name = "NODES")
 @JsonTypeInfo(use = JsonTypeInfo.Id.CLASS, include = JsonTypeInfo.As.PROPERTY, property = "@class")
 public class Node {
-    @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+
     private long id;
     private double longitude = 49.874978;
     private double latitude = 8.655971;
@@ -29,6 +28,8 @@ public class Node {
         this.longitude = longitude;
     }
 
+    @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
     public long getId() {
         return id;
     }

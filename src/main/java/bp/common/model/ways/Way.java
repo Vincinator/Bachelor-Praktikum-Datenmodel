@@ -14,8 +14,6 @@ import java.util.List;
 @Table(name = "WAYS")
 @JsonTypeInfo(use = JsonTypeInfo.Id.CLASS, include = JsonTypeInfo.As.PROPERTY, property = "@class")
 public class Way {
-    @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
     public long id;
     /**
      * The name of the road to display in the details view of the road.
@@ -41,6 +39,8 @@ public class Way {
         this.nodes = nodes;
     }
 
+    @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
     public long getId() {
         return id;
     }
@@ -57,6 +57,7 @@ public class Way {
         this.name = name;
     }
 
+    @OneToMany
     public ArrayList<Node> getNodes() {
         return nodes;
     }
