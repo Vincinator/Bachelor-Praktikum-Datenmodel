@@ -57,7 +57,10 @@ public class Way {
         this.name = name;
     }
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "way")
+    @OneToMany(
+            mappedBy = "way",
+            cascade = CascadeType.ALL
+    )
     public List<Node> getNodes() {
         return nodes;
     }

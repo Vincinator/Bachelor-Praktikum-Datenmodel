@@ -55,7 +55,8 @@ public class Node {
         this.latitude = latitude;
     }
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "way_id")
     public Way getWay() {
         return way;
     }
