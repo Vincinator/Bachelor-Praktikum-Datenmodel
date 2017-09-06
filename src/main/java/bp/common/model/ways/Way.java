@@ -19,7 +19,7 @@ public class Way {
      * The name of the road to display in the details view of the road.
      */
     public String name = "";
-    private List<Node> nodes = new ArrayList<Node>();
+    private List<Node> nodes;
     /**
      * value of highway tags
      */
@@ -34,7 +34,7 @@ public class Way {
      * @param name name of the street
      * @param nodes a list of nodes which this street is composed of
      */
-    public Way(String name, ArrayList<Node> nodes) {
+    public Way(String name, List<Node> nodes) {
         this.name = name;
         this.nodes = nodes;
     }
@@ -62,7 +62,7 @@ public class Way {
         return nodes;
     }
 
-    public void setNodes(ArrayList<Node> nodes) {
+    public void setNodes(List<Node> nodes) {
         this.nodes = nodes;
     }
 
