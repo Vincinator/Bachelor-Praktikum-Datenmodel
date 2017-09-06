@@ -16,6 +16,7 @@ public class Node {
     private long id;
     private double longitude = 49.874978;
     private double latitude = 8.655971;
+    private Way way;
 
     public Node(){}
     /**
@@ -52,6 +53,15 @@ public class Node {
 
     public void setLatitude(double latitude) {
         this.latitude = latitude;
+    }
+
+    @ManyToOne
+    public Way getWay() {
+        return way;
+    }
+
+    public void setWay(Way way) {
+        this.way = way;
     }
 
     @Override
