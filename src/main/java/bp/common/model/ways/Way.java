@@ -24,6 +24,7 @@ public class Way {
     public String name = "";
 
     @OneToMany(
+            fetch = FetchType.EAGER,
             mappedBy = "way",
             cascade = CascadeType.ALL
     )
