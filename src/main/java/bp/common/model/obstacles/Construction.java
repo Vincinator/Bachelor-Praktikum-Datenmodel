@@ -7,7 +7,7 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
-import java.util.Date;
+import java.sql.Date;
 
 /**
  * This class represents the Obstacle Construction and is used to stored

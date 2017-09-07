@@ -20,43 +20,17 @@ import javax.persistence.Entity;
 public class Elevator extends Obstacle implements IObstacle {
 
     public ObstacleTypes typeCode = ObstacleTypes.ELEVATOR;
-    /**
-     * attribute mFrom and mTo describe the 2 streets the elevator connects
-     */
-    @EditableAttribute("From")
-    private String mFrom;
-    @EditableAttribute("To")
-    private String mTo;
-
     public Elevator() {
 
     }
 
-    public Elevator(String name, double longitude, double latitude, String mFrom, String mTo) {
+    public Elevator(String name, double longitude, double latitude) {
         super(name, longitude, latitude);
-        this.mFrom = mFrom;
-        this.mTo = mTo;
     }
 
     @Override
     public ObstacleTypes getTypeCode() {
         return typeCode;
-    }
-
-    public String getFrom() {
-        return mFrom;
-    }
-
-    public void setFrom(String mFrom) {
-        this.mFrom = mFrom;
-    }
-
-    public String getTo() {
-        return mTo;
-    }
-
-    public void setTo(String mTo) {
-        this.mTo = mTo;
     }
 
 }
