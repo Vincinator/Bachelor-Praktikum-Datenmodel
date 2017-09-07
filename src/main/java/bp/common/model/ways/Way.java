@@ -18,6 +18,7 @@ public class Way {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     public long id;
+    private long osm_id;
     /**
      * The name of the road to display in the details view of the road.
      */
@@ -78,6 +79,14 @@ public class Way {
 
     public void setHighway(String highway) {
         this.highway = highway;
+    }
+
+    public long getOsm_id() {
+        return osm_id;
+    }
+
+    public void setOsm_id(long osm_id) {
+        this.osm_id = osm_id;
     }
 
     @Override

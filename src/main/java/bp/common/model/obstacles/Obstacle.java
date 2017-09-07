@@ -38,6 +38,7 @@ public abstract class Obstacle {
      * osm id of the way this obstacle is on
      */
     public long id_way;
+    public long osm_id;
     /**
      * 2 ids of 2 nodes which this Obstacle lies between
      */
@@ -117,5 +118,13 @@ public abstract class Obstacle {
 
     public void setId_lastnode(long id_lastnode) {
         this.id_lastnode = id_lastnode;
+    }
+
+    public long getOsm_id() {
+        return osm_id;
+    }
+
+    public void setOsm_id(long osm_id) {
+        this.osm_id = osm_id;
     }
 }

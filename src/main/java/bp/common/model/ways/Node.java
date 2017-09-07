@@ -15,6 +15,7 @@ public class Node {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private long id;
+    private long osm_id;
     private double longitude = 49.874978;
     private double latitude = 8.655971;
     @ManyToOne(fetch = FetchType.LAZY)
@@ -62,6 +63,14 @@ public class Node {
 
     public void setWay(Way way) {
         this.way = way;
+    }
+
+    public long getOsm_id() {
+        return osm_id;
+    }
+
+    public void setOsm_id(long osm_id) {
+        this.osm_id = osm_id;
     }
 
     @Override
