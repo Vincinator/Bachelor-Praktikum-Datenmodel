@@ -1,5 +1,6 @@
 package bp.common.model.ways;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
 import javax.persistence.*;
@@ -29,6 +30,7 @@ public class Way {
             mappedBy = "way",
             cascade = CascadeType.ALL
     )
+    @JsonManagedReference
     private List<Node> nodes;
     /**
      * value of highway tags

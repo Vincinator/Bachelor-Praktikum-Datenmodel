@@ -1,5 +1,6 @@
 package bp.common.model.ways;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
 import javax.persistence.*;
@@ -20,6 +21,7 @@ public class Node {
     private double latitude = 8.655971;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "way_id")
+    @JsonBackReference
     private Way way;
 
     public Node(){}
