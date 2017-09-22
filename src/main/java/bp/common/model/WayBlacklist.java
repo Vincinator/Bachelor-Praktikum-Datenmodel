@@ -8,7 +8,7 @@ import javax.persistence.*;
  * Created by Bi Banh Bao on 23.09.2017.
  */
 @Entity
-@Table(name = "WAYS")
+@Table(name = "WAYSBLACKLIST")
 @JsonTypeInfo(use = JsonTypeInfo.Id.CLASS, include = JsonTypeInfo.As.PROPERTY, property = "@class")
 public class WayBlacklist {
     @Id
