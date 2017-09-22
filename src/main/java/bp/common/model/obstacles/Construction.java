@@ -31,8 +31,8 @@ public class Construction extends Obstacle implements IObstacle {
 
 
 
-    public Construction(String name, double longitude, double latitude, double mSize, Date date) {
-        super(name, longitude, latitude);
+    public Construction(String name,double longitude_start, double latitude_start, double longitude_end, double latitude_end, double mSize, Date date) {
+        super(name, longitude_start, latitude_start, longitude_end,latitude_end);
         this.mSize = mSize;
         this.mValidUntil = date;
     }

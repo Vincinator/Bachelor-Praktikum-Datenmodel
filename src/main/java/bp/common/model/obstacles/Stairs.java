@@ -26,8 +26,8 @@ public class Stairs extends Obstacle implements IObstacle {
 
     }
 
-    public Stairs(String name, double longitude, double latitude, int numberOfStairs, int heightOfStairs, boolean handleAvailable) {
-        super(name, longitude, latitude);
+    public Stairs(String name, double longitude_start, double latitude_start,double longitude_end, double latitude_end,  int numberOfStairs, int heightOfStairs, boolean handleAvailable) {
+        super(name, longitude_start, latitude_start, longitude_end,latitude_end);
         this.mNumberOfStairs = numberOfStairs;
         this.mHeightOfStairs = heightOfStairs;
         this.mHandleAvailable = handleAvailable;

@@ -7,8 +7,10 @@ public interface IObstacle {
 
     String getName();
 
-    double getLongitude();
+    double getLongitudeStart();
 
-    double getLatitude();
+    double getLatitudeStart();
+    double getLongitudeEnd();
 
+    double getLatitudeEnd();
 }

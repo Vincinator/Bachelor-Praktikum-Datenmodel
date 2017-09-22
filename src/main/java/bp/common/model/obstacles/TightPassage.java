@@ -30,8 +30,8 @@ public class TightPassage extends Obstacle implements IObstacle {
     public TightPassage() {
     }
 
-    public TightPassage(String name, double longitude, double latitude, double width, boolean smallerThan90cm) {
-        super(name, longitude, latitude);
+    public TightPassage(String name, double longitude_start, double latitude_start,double longitude_end, double latitude_end, double width, boolean smallerThan90cm) {
+        super(name, longitude_start, latitude_start, longitude_end,latitude_end);
         this.mWidth = width;
     }
 

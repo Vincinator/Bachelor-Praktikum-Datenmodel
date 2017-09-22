@@ -19,8 +19,8 @@ public class Ramp extends Obstacle implements IObstacle {
     public Ramp() {
     }
 
-    public Ramp(String name, double longitude, double latitude) {
-        super(name, longitude, latitude);
+    public Ramp(String name,double longitude_start, double latitude_start, double longitude_end, double latitude_end) {
+        super(name, longitude_start, latitude_start, longitude_end,latitude_end);
     }
 
     @Override

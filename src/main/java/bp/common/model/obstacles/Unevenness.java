@@ -24,8 +24,8 @@ public class Unevenness extends Obstacle implements IObstacle {
 
     }
 
-    public Unevenness(String name, double longitude, double latitude, double mLength) {
-        super(name, longitude, latitude);
+    public Unevenness(String name, double longitude_start, double latitude_start,double longitude_end, double latitude_end, double mLength) {
+        super(name, longitude_start, latitude_start, longitude_end,latitude_end);
         this.mLength = mLength;
     }
 
