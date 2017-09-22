@@ -38,8 +38,6 @@ public class Way {
     private long osmid_secondWay;
     private long osmid_secondWayFirstNode;
     private long osmid_secondWaySecondNode;
-    private Node startingPoint;
-    private Node endPoint;
 
     /**
      * value of highway tags
