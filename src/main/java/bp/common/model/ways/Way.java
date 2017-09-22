@@ -146,22 +146,6 @@ public class Way {
         this.osmid_secondWaySecondNode = osmid_secondWaySecondNode;
     }
 
-    public Node getStartingPoint() {
-        return startingPoint;
-    }
-
-    public void setStartingPoint(Node startingPoint) {
-        this.startingPoint = startingPoint;
-    }
-
-    public Node getEndPoint() {
-        return endPoint;
-    }
-
-    public void setEndPoint(Node endPoint) {
-        this.endPoint = endPoint;
-    }
-
     @Override
     public String toString() {
         return "Way{" +
