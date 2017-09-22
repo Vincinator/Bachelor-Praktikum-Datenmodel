@@ -32,8 +32,8 @@ public class Stairs extends Obstacle implements IObstacle {
     private String ramp_stroller;
     @EditableAttribute(name = "Ramp Available for Wheelchair", type = AttributeTypes.DROPDOWN, validoptions = "yes,limited,no,designated")
     private String ramp_wheelchair;
-    @EditableAttribute(name = "Width in meters", type = AttributeTypes.INTEGER)
-    private int width;
+    @EditableAttribute(name = "Width in meters", type = AttributeTypes.DOUBLE)
+    private double width;
 
 
     public Stairs() {
@@ -49,14 +49,6 @@ public class Stairs extends Obstacle implements IObstacle {
     @Override
     public ObstacleTypes getTypeCode() {
         return typeCode;
-    }
-
-    public int getNumberOfStairs() {
-        return mNumberOfStairs;
-    }
-
-    public void setNumberOfStairs(int num) {
-        this.mNumberOfStairs = num;
     }
 
     public void setTypeCode(ObstacleTypes typeCode) {
