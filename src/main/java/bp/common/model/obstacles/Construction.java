@@ -1,5 +1,6 @@
 package bp.common.model.obstacles;
 
+import bp.common.model.AttributeTypes;
 import bp.common.model.IObstacle;
 import bp.common.model.ObstacleTypes;
 import bp.common.model.annotations.EditableAttribute;
@@ -21,9 +22,9 @@ public class Construction extends Obstacle implements IObstacle {
     /**
      * attribute mSize describe the mSize in m2 of a construction
      */
-    @EditableAttribute("Size")
+    @EditableAttribute(name = "Size in Square Meter", type = AttributeTypes.DOUBLE, validoptions = "")
     private double mSize;
-    @EditableAttribute("Valid Until")
+    @EditableAttribute(name = "Valid until", type = AttributeTypes.DATE, validoptions = "")
     private Date mValidUntil;
 
     public Construction() {

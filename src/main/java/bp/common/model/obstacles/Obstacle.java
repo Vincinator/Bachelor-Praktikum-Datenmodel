@@ -1,6 +1,7 @@
 package bp.common.model.obstacles;
 
 
+import bp.common.model.AttributeTypes;
 import bp.common.model.ObstacleTypes;
 import bp.common.model.annotations.EditableAttribute;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
@@ -21,13 +22,12 @@ import javax.persistence.*;
         @JsonSubTypes.Type(value = Construction.class, name = "construction"),
         @JsonSubTypes.Type(value = Elevator.class, name = "elevator"),
         @JsonSubTypes.Type(value = FastTrafficLight.class, name = "fasttrafficlight"),
-        @JsonSubTypes.Type(value = Ramp.class, name = "ramp"),
         @JsonSubTypes.Type(value = Stairs.class, name = "stairs"),
         @JsonSubTypes.Type(value = TightPassage.class, name = "tightpassage"),
         @JsonSubTypes.Type(value = Unevenness.class, name = "unevenness")})
 public abstract class Obstacle {
 
-    @EditableAttribute("Name")
+    @EditableAttribute(name = "Name", type = AttributeTypes.TEXT, validoptions = "")
     public String mName;
 
     // Coordinates of the starting point of the obstacle
@@ -42,7 +42,8 @@ public abstract class Obstacle {
      * osm id of the way this obstacle is on
      */
     public long id_way;
-    public long osm_id;
+    public long osm_id_first;
+    public long osm_id_last;
     /**
      * 2 ids of 2 nodes which this Obstacle lies between
      */
@@ -118,6 +119,22 @@ public abstract class Obstacle {
         this.longitude_end = longitude;
     }
 
+    public long getOsm_id_first() {
+        return osm_id_first;
+    }
+
+    public void setOsm_id_first(long osm_id_first) {
+        this.osm_id_first = osm_id_first;
+    }
+
+    public long getOsm_id_last() {
+        return osm_id_last;
+    }
+
+    public void setOsm_id_last(long osm_id_last) {
+        this.osm_id_last = osm_id_last;
+    }
+
     public long getId_way() {
         return id_way;
     }
@@ -140,13 +157,5 @@ public abstract class Obstacle {
 
     public void setId_lastnode(long id_lastnode) {
         this.id_lastnode = id_lastnode;
-    }
-
-    public long getOsm_id() {
-        return osm_id;
-    }
-
-    public void setOsm_id(long osm_id) {
-        this.osm_id = osm_id;
     }
 }

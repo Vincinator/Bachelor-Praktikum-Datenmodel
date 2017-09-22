@@ -1,5 +1,6 @@
 package bp.common.model.obstacles;
 
+import bp.common.model.AttributeTypes;
 import bp.common.model.IObstacle;
 import bp.common.model.ObstacleTypes;
 import bp.common.model.annotations.EditableAttribute;
@@ -21,7 +22,7 @@ public class FastTrafficLight extends Obstacle implements IObstacle {
     /**
      * mDuration of the traffic light in seconds
      */
-    @EditableAttribute("Duration")
+    @EditableAttribute(name = "Duration of Greenlight", type = AttributeTypes.INTEGER, validoptions = "")
     private int mDuration;
 
     public FastTrafficLight() {

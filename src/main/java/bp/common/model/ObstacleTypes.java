@@ -5,7 +5,6 @@ package bp.common.model;
  */
 public enum ObstacleTypes {
     STAIRS,
-    RAMP,
     UNEVENNESS,
     CONSTRUCTION,
     FAST_TRAFFIC_LIGHT,
