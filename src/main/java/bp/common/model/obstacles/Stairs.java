@@ -119,11 +119,11 @@ public class Stairs extends Obstacle implements IObstacle {
         this.ramp_wheelchair = ramp_wheelchair;
     }
 
-    public int getWidth() {
+    public double getWidth() {
         return width;
     }
 
-    public void setWidth(int width) {
+    public void setWidth(double width) {
         this.width = width;
     }
 }
