@@ -32,6 +32,15 @@ public class Way {
     )
     @JsonManagedReference
     private List<Node> nodes;
+    private long osmid_firstWay;
+    private long osmid_firstWayFirstNode;
+    private long osmid_firstWaySecondNode;
+    private long osmid_secondWay;
+    private long osmid_secondWayFirstNode;
+    private long osmid_secondWaySecondNode;
+    private Node startingPoint;
+    private Node endPoint;
+
     /**
      * value of highway tags
      */
@@ -89,6 +98,70 @@ public class Way {
 
     public void setOsm_id(long osm_id) {
         this.osm_id = osm_id;
+    }
+
+    public long getOsmid_firstWay() {
+        return osmid_firstWay;
+    }
+
+    public void setOsmid_firstWay(long osmid_firstWay) {
+        this.osmid_firstWay = osmid_firstWay;
+    }
+
+    public long getOsmid_firstWayFirstNode() {
+        return osmid_firstWayFirstNode;
+    }
+
+    public void setOsmid_firstWayFirstNode(long osmid_firstWayFirstNode) {
+        this.osmid_firstWayFirstNode = osmid_firstWayFirstNode;
+    }
+
+    public long getOsmid_firstWaySecondNode() {
+        return osmid_firstWaySecondNode;
+    }
+
+    public void setOsmid_firstWaySecondNode(long osmid_firstWaySecondNode) {
+        this.osmid_firstWaySecondNode = osmid_firstWaySecondNode;
+    }
+
+    public long getOsmid_secondWay() {
+        return osmid_secondWay;
+    }
+
+    public void setOsmid_secondWay(long osmid_secondWay) {
+        this.osmid_secondWay = osmid_secondWay;
+    }
+
+    public long getOsmid_secondWayFirstNode() {
+        return osmid_secondWayFirstNode;
+    }
+
+    public void setOsmid_secondWayFirstNode(long osmid_secondWayFirstNode) {
+        this.osmid_secondWayFirstNode = osmid_secondWayFirstNode;
+    }
+
+    public long getOsmid_secondWaySecondNode() {
+        return osmid_secondWaySecondNode;
+    }
+
+    public void setOsmid_secondWaySecondNode(long osmid_secondWaySecondNode) {
+        this.osmid_secondWaySecondNode = osmid_secondWaySecondNode;
+    }
+
+    public Node getStartingPoint() {
+        return startingPoint;
+    }
+
+    public void setStartingPoint(Node startingPoint) {
+        this.startingPoint = startingPoint;
+    }
+
+    public Node getEndPoint() {
+        return endPoint;
+    }
+
+    public void setEndPoint(Node endPoint) {
+        this.endPoint = endPoint;
     }
 
     @Override
