@@ -16,14 +16,24 @@ import javax.persistence.Entity;
 public class Stairs extends Obstacle implements IObstacle {
 
     public ObstacleTypes typeCode = ObstacleTypes.STAIRS;
-    @EditableAttribute(name = "Number of Stairs", type = AttributeTypes.INTEGER, validoptions = "")
+    @EditableAttribute(name = "Where the Stairs lead in the Direction of the Way", type = AttributeTypes.DROPDOWN, validoptions = "up,down")
+    private String incline;
+    @EditableAttribute(name = "Number of Stairs", type = AttributeTypes.INTEGER)
     private int mNumberOfStairs;
     @EditableAttribute(name = "Handrail Available", type = AttributeTypes.DROPDOWN, validoptions = "yes,no")
     private String handrail;
     @EditableAttribute(name = "Tactile Paving Available", type = AttributeTypes.DROPDOWN, validoptions = "yes,no,contrasted,primitive,incorrect")
     private String tactile_paving;
+    @EditableAttribute(name = "Tactile Paving Available", type = AttributeTypes.DROPDOWN, validoptions = "yes,no,contrasted,primitive,incorrect")
+    private String tactile_writing;
     @EditableAttribute(name = "Ramp Available", type = AttributeTypes.DROPDOWN, validoptions = "yes,no")
     private String ramp;
+    @EditableAttribute(name = "Ramp Available for Stroller", type = AttributeTypes.DROPDOWN, validoptions = "yes,limited,no")
+    private String ramp_stroller;
+    @EditableAttribute(name = "Ramp Available for Wheelchair", type = AttributeTypes.DROPDOWN, validoptions = "yes,limited,no,designated")
+    private String ramp_wheelchair;
+    @EditableAttribute(name = "Width in meters", type = AttributeTypes.INTEGER)
+    private int width;
 
 
     public Stairs() {
@@ -83,5 +93,45 @@ public class Stairs extends Obstacle implements IObstacle {
 
     public void setRamp(String ramp) {
         this.ramp = ramp;
+    }
+
+    public String getIncline() {
+        return incline;
+    }
+
+    public void setIncline(String incline) {
+        this.incline = incline;
+    }
+
+    public String getTactile_writing() {
+        return tactile_writing;
+    }
+
+    public void setTactile_writing(String tactile_writing) {
+        this.tactile_writing = tactile_writing;
+    }
+
+    public String getRamp_stroller() {
+        return ramp_stroller;
+    }
+
+    public void setRamp_stroller(String ramp_stroller) {
+        this.ramp_stroller = ramp_stroller;
+    }
+
+    public String getRamp_wheelchair() {
+        return ramp_wheelchair;
+    }
+
+    public void setRamp_wheelchair(String ramp_wheelchair) {
+        this.ramp_wheelchair = ramp_wheelchair;
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public void setWidth(int width) {
+        this.width = width;
     }
 }

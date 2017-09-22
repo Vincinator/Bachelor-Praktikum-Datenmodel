@@ -22,7 +22,7 @@ public class FastTrafficLight extends Obstacle implements IObstacle {
     /**
      * mDuration of the traffic light in seconds
      */
-    @EditableAttribute(name = "Duration of Greenlight", type = AttributeTypes.INTEGER, validoptions = "")
+    @EditableAttribute(name = "Duration of Greenlight in seconds", type = AttributeTypes.INTEGER)
     private int mDuration;
 
     public FastTrafficLight() {

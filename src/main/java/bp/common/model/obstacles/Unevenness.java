@@ -1,6 +1,7 @@
 package bp.common.model.obstacles;
 
 
+import bp.common.model.AttributeTypes;
 import bp.common.model.IObstacle;
 import bp.common.model.ObstacleTypes;
 import bp.common.model.annotations.EditableAttribute;
@@ -17,7 +18,7 @@ public class Unevenness extends Obstacle implements IObstacle {
 
 
     public ObstacleTypes typeCode = ObstacleTypes.UNEVENNESS;
-    @EditableAttribute("Unevenness mLength")
+    @EditableAttribute(name = "Length of Uneveness in meter", type = AttributeTypes.DOUBLE)
     private double mLength;
 
     public Unevenness() {

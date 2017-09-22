@@ -27,7 +27,7 @@ import javax.persistence.*;
         @JsonSubTypes.Type(value = Unevenness.class, name = "unevenness")})
 public abstract class Obstacle {
 
-    @EditableAttribute(name = "Name", type = AttributeTypes.TEXT, validoptions = "")
+    @EditableAttribute(name = "Name", type = AttributeTypes.TEXT)
     public String mName;
 
     // Coordinates of the starting point of the obstacle

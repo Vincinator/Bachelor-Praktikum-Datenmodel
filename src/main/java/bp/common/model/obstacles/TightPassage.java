@@ -1,5 +1,6 @@
 package bp.common.model.obstacles;
 
+import bp.common.model.AttributeTypes;
 import bp.common.model.IObstacle;
 import bp.common.model.ObstacleTypes;
 import bp.common.model.annotations.EditableAttribute;
@@ -24,7 +25,7 @@ public class TightPassage extends Obstacle implements IObstacle {
     /**
      * the mWidth of the passage
      */
-    @EditableAttribute("Passage mWidth")
+    @EditableAttribute(name = "Passage width in Meter", type = AttributeTypes.DOUBLE)
     private double mWidth;
 
     public TightPassage() {

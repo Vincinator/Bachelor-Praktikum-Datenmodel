@@ -22,9 +22,9 @@ public class Construction extends Obstacle implements IObstacle {
     /**
      * attribute mSize describe the mSize in m2 of a construction
      */
-    @EditableAttribute(name = "Size in Square Meter", type = AttributeTypes.DOUBLE, validoptions = "")
+    @EditableAttribute(name = "Size in Square Meter", type = AttributeTypes.DOUBLE)
     private double mSize;
-    @EditableAttribute(name = "Valid until", type = AttributeTypes.DATE, validoptions = "")
+    @EditableAttribute(name = "Valid until", type = AttributeTypes.DATE)
     private Date mValidUntil;
 
     public Construction() {

@@ -10,6 +10,6 @@ import bp.common.model.AttributeTypes;
 public @interface EditableAttribute {
     String name();
     AttributeTypes type();
-    String validoptions();
+    String validoptions() default "";
     
 }
