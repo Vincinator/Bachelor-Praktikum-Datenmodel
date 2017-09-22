@@ -42,8 +42,11 @@ public abstract class Obstacle {
      * osm id of the way this obstacle is on
      */
     public long id_way;
-    public long osm_id_first;
-    public long osm_id_last;
+    /**
+     * osm id of the starting point from the stair
+     */
+    public long osm_id_start;
+    public long osm_id_end;
     /**
      * 2 ids of 2 nodes which this Obstacle lies between
      */
@@ -119,22 +122,6 @@ public abstract class Obstacle {
         this.longitude_end = longitude;
     }
 
-    public long getOsm_id_first() {
-        return osm_id_first;
-    }
-
-    public void setOsm_id_first(long osm_id_first) {
-        this.osm_id_first = osm_id_first;
-    }
-
-    public long getOsm_id_last() {
-        return osm_id_last;
-    }
-
-    public void setOsm_id_last(long osm_id_last) {
-        this.osm_id_last = osm_id_last;
-    }
-
     public long getId_way() {
         return id_way;
     }
@@ -157,5 +144,21 @@ public abstract class Obstacle {
 
     public void setId_lastnode(long id_lastnode) {
         this.id_lastnode = id_lastnode;
+    }
+
+    public long getOsm_id_start() {
+        return osm_id_start;
+    }
+
+    public void setOsm_id_start(long osm_id_start) {
+        this.osm_id_start = osm_id_start;
+    }
+
+    public long getOsm_id_end() {
+        return osm_id_end;
+    }
+
+    public void setOsm_id_end(long osm_id_end) {
+        this.osm_id_end = osm_id_end;
     }
 }
