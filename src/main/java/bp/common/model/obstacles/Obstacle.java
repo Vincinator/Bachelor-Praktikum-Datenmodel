@@ -29,11 +29,15 @@ public abstract class Obstacle {
 
     @EditableAttribute("Name")
     public String mName;
-    //@EditableAttribute("longitude")
-    public double longitude = 49.874978;
-    //@EditableAttribute("latitude")
-    public double latitude = 8.655971;
 
+    // Coordinates of the starting point of the obstacle
+    public double longitude_start = 49.874978;
+    public double latitude_start = 8.655971;
+
+    // Coordinates of the endpoint of the obstacle 
+    public double longitude_end;
+    public double latitude_end;
+        
     /**
      * osm id of the way this obstacle is on
      */
@@ -55,10 +59,12 @@ public abstract class Obstacle {
 
     }
 
-    public Obstacle(String mName, double longitude, double latitude) {
+    public Obstacle(String mName, double longitude_start, double latitude_start, double longitude_end, double latitude_end) {
         this.mName = mName;
-        this.longitude = longitude;
-        this.latitude = latitude;
+        this.longitude_start = longitude_start;
+        this.latitude_start = latitude_start;
+        this.longitude_end = longitude_end;
+        this.latitude_end = latitude_end;
     }
 
     public long getId() {
@@ -80,20 +86,36 @@ public abstract class Obstacle {
     public abstract ObstacleTypes getTypeCode();
 
 
-    public double getLatitude() {
-        return latitude;
+    public double getLatitudeStart() {
+        return latitude_start;
     }
 
-    public void setLatitude(double latitude) {
-        this.latitude = latitude;
+    public void setLatitudeStart(double latitude) {
+        this.latitude_start = latitude;
     }
 
-    public double getLongitude() {
-        return longitude;
+    public double getLongitudeStart() {
+        return longitude_start;
     }
 
-    public void setLongitude(double longitude) {
-        this.longitude = longitude;
+    public void setLongitudeStart(double longitude) {
+        this.longitude_start = longitude;
+    }
+        
+    public double getLatitudeEnd() {
+        return latitude_end;
+    }
+
+    public void setLatitudeEnd(double latitude) {
+        this.latitude_end = latitude;
+    }
+
+    public double getLongitudeEnd() {
+        return longitude_end;
+    }
+
+    public void setLongitudeEnd(double longitude) {
+        this.longitude_end = longitude;
     }
 
     public long getId_way() {
