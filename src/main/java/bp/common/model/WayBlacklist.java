@@ -23,8 +23,6 @@ public class WayBlacklist {
     private long changeset_id;
     private String tags;
     @ElementCollection
-    @CollectionTable(name="Nodes", joinColumns = @JoinColumn(name="id"))
-    @Column(name="nodes")
     private List<Long> nodes;
 
     public long getId() {
