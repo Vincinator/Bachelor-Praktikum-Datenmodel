@@ -25,6 +25,16 @@ public class WayBlacklist {
     @ElementCollection
     private List<Long> nodes;
 
+    public WayBlacklist(long osm_id, int version, int user_id, Timestamp tstamp, long changeset_id, String tags, List<Long> nodes) {
+        this.osm_id = osm_id;
+        this.version = version;
+        this.user_id = user_id;
+        this.tstamp = tstamp;
+        this.changeset_id = changeset_id;
+        this.tags = tags;
+        this.nodes = nodes;
+    }
+
     public long getId() {
         return id;
     }
