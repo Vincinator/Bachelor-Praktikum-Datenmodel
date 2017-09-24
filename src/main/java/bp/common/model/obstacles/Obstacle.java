@@ -71,10 +71,18 @@ public abstract class Obstacle {
         this.latitude_end = latitude_end;
     }
 
+    /**
+     *
+     * @return the hibernate DB ID of this Obstacle
+     */
     public long getId() {
         return id;
     }
 
+    /**
+     *
+     * @param id the hibernate DB ID of this Obstacle
+     */
     public void setId(long id) {
         this.id = id;
     }
@@ -122,42 +130,80 @@ public abstract class Obstacle {
         this.longitude_end = longitude;
     }
 
+    /**
+     *
+     * @return osm ID of the way the Obstacle lies on
+     */
     public long getId_way() {
         return id_way;
     }
 
+    /**
+     *
+     * @param id_way osm ID of the way the Obstacle lies on
+     */
     public void setId_way(long id_way) {
         this.id_way = id_way;
     }
 
+    /**
+     * @return id 1 of the 2 nodes which this Obstacle lies between
+     */
     public long getId_firstnode() {
         return id_firstnode;
     }
 
+    /**
+     *
+     * @param id_firstnode set id 1 of the 2 nodes which this Obstacle lies between
+     */
     public void setId_firstnode(long id_firstnode) {
         this.id_firstnode = id_firstnode;
     }
 
+    /**
+     * @return id 1 of the 2 nodes which this Obstacle lies between
+     */
     public long getId_lastnode() {
         return id_lastnode;
     }
 
+    /**
+     * set id 1 of the 2 nodes which this Obstacle lies between
+     * @param id_lastnode
+     */
     public void setId_lastnode(long id_lastnode) {
         this.id_lastnode = id_lastnode;
     }
 
+    /**
+     *
+     * @return osm id of the starting point from the stair
+     */
     public long getOsm_id_start() {
         return osm_id_start;
     }
 
+    /**
+     *
+     * @param osm_id_start set osm id of the starting point from the stair
+     */
     public void setOsm_id_start(long osm_id_start) {
         this.osm_id_start = osm_id_start;
     }
 
+    /**
+     *
+     * @return osm id of the ending point from the stair
+     */
     public long getOsm_id_end() {
         return osm_id_end;
     }
 
+    /**
+     *
+     * @param osm_id_end set osm id of the ending point from the stair
+     */
     public void setOsm_id_end(long osm_id_end) {
         this.osm_id_end = osm_id_end;
     }
