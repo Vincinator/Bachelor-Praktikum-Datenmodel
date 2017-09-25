@@ -13,6 +13,8 @@ import javax.persistence.*;
 @Table(name = "NODES")
 @JsonTypeInfo(use = JsonTypeInfo.Id.CLASS, include = JsonTypeInfo.As.PROPERTY, property = "@class")
 public class Node {
+    boolean alreadyExported = false;
+
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private long id;
@@ -73,6 +75,14 @@ public class Node {
 
     public void setOsm_id(long osm_id) {
         this.osm_id = osm_id;
+    }
+
+    public boolean isAlreadyExported() {
+        return alreadyExported;
+    }
+
+    public void setAlreadyExported(boolean alreadyExported) {
+        this.alreadyExported = alreadyExported;
     }
 
     @Override

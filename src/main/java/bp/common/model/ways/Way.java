@@ -15,6 +15,7 @@ import java.util.List;
 @Table(name = "WAYS")
 @JsonTypeInfo(use = JsonTypeInfo.Id.CLASS, include = JsonTypeInfo.As.PROPERTY, property = "@class")
 public class Way {
+    boolean alreadyExported = false;
 
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
@@ -144,6 +145,14 @@ public class Way {
 
     public void setOsmid_secondWaySecondNode(long osmid_secondWaySecondNode) {
         this.osmid_secondWaySecondNode = osmid_secondWaySecondNode;
+    }
+
+    public boolean isAlreadyExported() {
+        return alreadyExported;
+    }
+
+    public void setAlreadyExported(boolean alreadyExported) {
+        this.alreadyExported = alreadyExported;
     }
 
     @Override

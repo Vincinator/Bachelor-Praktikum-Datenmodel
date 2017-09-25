@@ -26,6 +26,7 @@ import javax.persistence.*;
         @JsonSubTypes.Type(value = TightPassage.class, name = "tightpassage"),
         @JsonSubTypes.Type(value = Unevenness.class, name = "unevenness")})
 public abstract class Obstacle {
+    boolean alreadyExported = false;
 
     @EditableAttribute(name = "Name", type = AttributeTypes.TEXT)
     public String mName;
@@ -206,5 +207,17 @@ public abstract class Obstacle {
      */
     public void setOsm_id_end(long osm_id_end) {
         this.osm_id_end = osm_id_end;
+    }
+
+    /**
+     * is this Obstacle already prepared for ExportTool ?
+     * @return
+     */
+    public boolean isAlreadyExported() {
+        return alreadyExported;
+    }
+
+    public void setAlreadyExported(boolean alreadyExported) {
+        this.alreadyExported = alreadyExported;
     }
 }
