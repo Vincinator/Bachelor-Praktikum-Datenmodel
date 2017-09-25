@@ -44,6 +44,9 @@ public class Way {
      * value of highway tags
      */
     public String highway= "*";
+    public String additionalTags = "";
+    public boolean isObstacle = false;
+
     /**
      * list of node instead of GeoPoint
      */
@@ -153,6 +156,26 @@ public class Way {
 
     public void setAlreadyExported(boolean alreadyExported) {
         this.alreadyExported = alreadyExported;
+    }
+
+    public String getAdditionalTags() {
+        return additionalTags;
+    }
+
+    public void setAdditionalTags(String additionalTags) {
+        this.additionalTags = additionalTags;
+    }
+
+    /**
+     *
+     * @return is this Way a stair
+     */
+    public boolean isObstacle() {
+        return isObstacle;
+    }
+
+    public void setIsObstacle(boolean obstacle) {
+        isObstacle = obstacle;
     }
 
     @Override
