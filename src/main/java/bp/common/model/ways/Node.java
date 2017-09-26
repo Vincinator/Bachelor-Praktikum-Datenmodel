@@ -21,7 +21,7 @@ public class Node {
     private long osm_id;
     private double longitude = 49.874978;
     private double latitude = 8.655971;
-    @ManyToOne(cascade= CascadeType.PERSIST, fetch = FetchType.LAZY)
+    @ManyToOne(cascade= CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinColumn(name = "way_id")
     @JsonBackReference
     private Way way;
