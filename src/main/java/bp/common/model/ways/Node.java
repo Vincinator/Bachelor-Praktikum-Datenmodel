@@ -25,6 +25,7 @@ public class Node {
     @JoinColumn(name = "way_id")
     @JsonBackReference
     private Way way;
+    private String additionalTags = "";
 
     public Node(){}
     /**
@@ -36,6 +37,7 @@ public class Node {
         this.latitude = latitude;
         this.longitude = longitude;
     }
+
 
     public long getId() {
         return id;
@@ -83,6 +85,14 @@ public class Node {
 
     public void setAlreadyExported(boolean alreadyExported) {
         this.alreadyExported = alreadyExported;
+    }
+
+    public String getAdditionalTags() {
+        return additionalTags;
+    }
+
+    public void setAdditionalTags(String additionalTags) {
+        this.additionalTags = additionalTags;
     }
 
     @Override
