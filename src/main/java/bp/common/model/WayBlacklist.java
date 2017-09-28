@@ -27,7 +27,6 @@ public class WayBlacklist {
     private List<Long> nodes;
 
     public WayBlacklist() {
-        
     }
 
     public WayBlacklist(long osm_id, int version, int user_id, Timestamp tstamp, long changeset_id, String tags, List<Long> nodes) {
