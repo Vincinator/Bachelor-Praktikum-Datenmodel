@@ -25,6 +25,7 @@ public class Node {
     @JoinColumn(name = "way_id")
     @JsonBackReference
     private Way way;
+    @Column(columnDefinition="TEXT")
     private String additionalTags = "";
 
     public Node(){}

@@ -44,6 +44,7 @@ public class Way {
      * value of highway tags
      */
     public String highway= "*";
+    @Column(columnDefinition="TEXT")
     public String additionalTags = "";
     public boolean isObstacle = false;
 
