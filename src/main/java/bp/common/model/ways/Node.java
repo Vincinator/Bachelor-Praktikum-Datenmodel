@@ -24,12 +24,12 @@ public class Node {
     private double latitude = 8.655971;
     @ManyToOne(cascade= CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinColumn(name = "way_id")
-    @JsonBackReference
+    @JsonBackReference("nodeToWay")
     private Way way;
 
     @ManyToOne(cascade= CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinColumn(name = "obstacle_id")
-    @JsonBackReference
+    @JsonBackReference("nodeToObstacle")
     private Obstacle obstacle;
     @Column(columnDefinition="TEXT")
     private String additionalTags = "";
