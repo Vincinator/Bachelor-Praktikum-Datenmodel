@@ -102,6 +102,14 @@ public class Node {
         this.additionalTags = additionalTags;
     }
 
+    public Obstacle getObstacle() {
+        return obstacle;
+    }
+
+    public void setObstacle(Obstacle obstacle) {
+        this.obstacle = obstacle;
+    }
+
     @Override
     public String toString() {
         return "Node{" +
