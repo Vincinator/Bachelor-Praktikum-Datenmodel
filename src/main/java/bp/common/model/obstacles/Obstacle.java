@@ -66,7 +66,7 @@ public abstract class Obstacle {
             mappedBy = "obstacle",
             cascade = CascadeType.ALL
     )
-    @JsonManagedReference("intermediate-nodes")
+    @JsonManagedReference("nodeToObstacle")
     private List<Node> nodes;
 
     @TableGenerator(name = "OBSTACLE_GEN", table = "ID_GEN", pkColumnName = "GEN_NAME", valueColumnName = "GEN_VAL", allocationSize = 1)
