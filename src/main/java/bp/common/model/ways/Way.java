@@ -46,6 +46,7 @@ public class Way {
     public String highway= "*";
     @Column(columnDefinition="TEXT")
     public String additionalTags = "";
+
     public boolean isObstacle = false;
 
     /**
@@ -167,17 +168,7 @@ public class Way {
         this.additionalTags = additionalTags;
     }
 
-    /**
-     *
-     * @return is this Way a stair
-     */
-    public boolean isObstacle() {
-        return isObstacle;
-    }
 
-    public void setIsObstacle(boolean obstacle) {
-        isObstacle = obstacle;
-    }
 
     @Override
     public String toString() {
