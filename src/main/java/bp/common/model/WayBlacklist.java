@@ -21,6 +21,7 @@ public class WayBlacklist {
     private int user_id;
     private Timestamp tstamp;
     private long changeset_id;
+    @Column(columnDefinition="TEXT")
     private String tags;
     @ElementCollection
     private List<Long> nodes;
