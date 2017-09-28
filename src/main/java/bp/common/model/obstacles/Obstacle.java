@@ -4,10 +4,13 @@ package bp.common.model.obstacles;
 import bp.common.model.AttributeTypes;
 import bp.common.model.ObstacleTypes;
 import bp.common.model.annotations.EditableAttribute;
+import bp.common.model.ways.Node;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
 import javax.persistence.*;
+import java.util.List;
 
 /**
  * Created by Bi on 18.05.2017.
@@ -53,6 +56,18 @@ public abstract class Obstacle {
      */
     public long id_firstnode;
     public long id_lastnode;
+
+    /**
+     * List of all nodes that lies between the 2 Obstacles Nodes
+     * the 2 Obstacles Nodes included
+     */
+    @OneToMany(
+            fetch = FetchType.EAGER,
+            mappedBy = "obstacle",
+            cascade = CascadeType.ALL
+    )
+    @JsonManagedReference
+    private List<Node> nodes;
 
     @TableGenerator(name = "OBSTACLE_GEN", table = "ID_GEN", pkColumnName = "GEN_NAME", valueColumnName = "GEN_VAL", allocationSize = 1)
     @Id
@@ -219,5 +234,13 @@ public abstract class Obstacle {
 
     public void setAlreadyExported(boolean alreadyExported) {
         this.alreadyExported = alreadyExported;
+    }
+
+    public List<Node> getNodes() {
+        return nodes;
+    }
+
+    public void setNodes(List<Node> nodes) {
+        this.nodes = nodes;
     }
 }

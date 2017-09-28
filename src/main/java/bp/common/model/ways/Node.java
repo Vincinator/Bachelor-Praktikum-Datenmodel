@@ -1,5 +1,6 @@
 package bp.common.model.ways;
 
+import bp.common.model.obstacles.Obstacle;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
@@ -25,6 +26,11 @@ public class Node {
     @JoinColumn(name = "way_id")
     @JsonBackReference
     private Way way;
+
+    @ManyToOne(cascade= CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = "obstacle_id")
+    @JsonBackReference
+    private Obstacle obstacle;
     @Column(columnDefinition="TEXT")
     private String additionalTags = "";
 
