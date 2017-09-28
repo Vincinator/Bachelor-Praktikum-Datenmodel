@@ -31,7 +31,7 @@ public class Way {
             mappedBy = "way",
             cascade = CascadeType.ALL
     )
-    @JsonManagedReference
+    @JsonManagedReference("way-nodes")
     private List<Node> nodes;
     private long osmid_firstWay;
     private long osmid_firstWayFirstNode;
